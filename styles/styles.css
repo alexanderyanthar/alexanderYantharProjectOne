@@ -228,9 +228,9 @@ template {
 
 html {
   font-size: 125%;
-  scroll-behavior: smooth;
-  font-family: "Poppins", sans-serif;
   color: #333;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -248,6 +248,7 @@ h2,
 nav,
 p {
   font-size: 500;
+  color: #333;
 }
 
 ul {

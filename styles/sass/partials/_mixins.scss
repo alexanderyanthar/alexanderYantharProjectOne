@@ -1,0 +1,27 @@
+@use "./variables" as *;
+
+// fonts
+@mixin fontStyle($sizeValue, $colorValue: $darkGrey) {
+    font-size: $sizeValue;
+    color: $colorValue;
+}
+
+// colours
+@mixin fontColour($colorValue) {
+    color: $colorValue;
+}
+
+// general styling
+// images
+@mixin imgSize($imgHeight: auto, $imgMaxWidth: 100%, $imgDisplay: block) {
+    height: $imgHeight;
+    max-width: $imgMaxWidth;
+    display: $imgDisplay;
+}
+
+// wrapper
+@mixin wrapperStyle($wrapperMargin: 0 auto, $wrapperMaxWidth: 1200px, $wrapperWidth: 90%) {
+    margin: $wrapperMargin;
+    max-width: $wrapperMaxWidth;
+    width: $wrapperWidth;
+}

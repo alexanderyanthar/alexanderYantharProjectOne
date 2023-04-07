@@ -1,10 +1,10 @@
 @use "./variables" as *;
+@use "./mixins" as *;
 
 html {
-    font-size: 125%;
-    scroll-behavior: smooth;
+    @include fontStyle(125%);
     font-family: 'Poppins', sans-serif;
-    color: $darkGrey;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -12,16 +12,14 @@ a {
 }
 
 img {
-   height: auto;
-   max-width: 100%;
-   display: block; 
+   @include imgSize();
 }
 
 h1,
 h2,
 nav,
 p {
-    font-size: $medium;
+    @include fontStyle($medium);
 }
 
 ul {
@@ -29,9 +27,7 @@ ul {
 }
 
 .wrapper {
-    margin: 0 auto;
-    max-width: 1200px;
-    width: 90%;
+    @include wrapperStyle();
 }
 
 
