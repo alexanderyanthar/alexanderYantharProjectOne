@@ -225,3 +225,37 @@ template {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+html {
+  font-size: 125%;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 90%;
+}
+
+h1,
+h2,
+nav,
+p {
+  font-size: 500;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
