@@ -8,33 +8,135 @@
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
+    <!-- header section -->
     <header>
-        <!-- Navigation bar with logo and shopping car -->
-        <div class="navBar">
-            <img src="./assets/logo-black.png" alt="Novas boutique shop logo">
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#">home</a>
-                    </li>
-                    <li>
-                        <a href="#">blog</a>
-                    </li>
-                    <li>
-                        <a href="#">contact us</a>
-                    </li>
-                </ul>
-            </nav>
-            <a href="#">
-                <img src="./assets/icons/shopping-cart-black-icon.png" alt="Checkout icon to see what's in your cart">
-            </a>
-        </div>
+        <div class="wrapper">
+            <!-- Navigation bar with logo and shopping car -->
+            <div class="navBar">
+                <img src="./assets/logo-black.png" alt="Novas boutique shop logo">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">home</a>
+                        </li>
+                        <li>
+                            <a href="#">blog</a>
+                        </li>
+                        <li>
+                            <a href="#">contact us</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="#">
+                    <img src="./assets/icons/shopping-cart-black-icon.png" alt="Checkout icon to see what's in your cart">
+                </a>
+            </div>
 
+        </div>
+        
         <!-- hero image section -->
         <!-- *add background image! -->
+        <!-- img is full bleed** -->
         <h1>NOVAS Boutique Shop</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus atque rerum laudantium. Repellendus, sunt cupiditate quam omnis praesentium odio fuga, cum debitis, vitae necessitatibus obcaecati pariatur id nihil commodi itaque.</p>
     </header>
+
+    <!-- main section -->
+    <main>
+        <section>
+            <!-- links to specific items -->
+        </section>
+        <section>
+            <!-- Featured sales -->
+        </section>
+        <section>
+            <!-- Major sales -->
+        </section>
+        <section>
+            <!-- Instagram gallery -->
+        </section>
+    </main>
+
+    <footer>
+        <!-- logo/icon section -->
+        <div>
+            <img src="./assets/logo-white.png" alt="Novas Boutique Shop logo">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, doloribus.</p>
+            <ul>
+                <li>
+                    <!-- need to fix height of svg files -->
+                    <a href="#facebook">
+                        <img src="./assets/icons/facebook.svg" alt="link to Novas' facebook page">
+                    </a>
+                </li>
+                <li>
+                    <a href="#twitter">
+                        <img src="./assets/icons/twitter.svg" alt="Link to Nova's twitter">
+                    </a>
+                </li>
+                <li>
+                    <a href="#instagram">
+                        <img src="./assets/icons/instagram.svg" alt="Link to Novas' instagram page">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Contact info -->
+        <div>
+            <h3>Contact</h3>
+            <ul>
+                <li>
+                    <img src="./assets/icons/address.svg" alt="Link to show address to Novas' shop in google maps">
+                    <p>No 40 Baria Street</p>
+                </li>
+                <li>
+                    <img src="./assets/icons/telephone.svg" alt="Link to call Novas' phone">
+                    <p>156-366-6666</p>
+                </li>
+                <li>
+                    <img src="./assets/icons/email.svg" alt="Link to Novas' email address">
+                    <p>cool@example.com</p>
+                </li>
+                <li>
+                    <img src="./assets/icons/globe.svg" alt="Link to Novas' website">
+                    <a href="#">www.novas.com</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Profile section -->
+        <div>
+            <h3>Profile</h3>
+            <ul>
+                <li>
+                    <img src="./assets/icons/user.svg" alt="Link to your account">
+                    <a href="#account">My Account</a>
+                </li>
+                <li>
+                    <img src="./assets/icons/checkout.svg" alt="Link to your checkout">
+                    <a href="#checkout">Checkout</a>
+                </li>
+                <li>
+                    <img src="./assets/icons/tracking.svg" alt="Link to see order tracking">
+                    <a href="#tracking">Order Tracking</a>
+                </li>
+                <li>
+                    <img src="./assets/icons/support.svg" alt="Link to get access to help and support">
+                    <a href="#help">Help & Support</a>
+                </li>
+            </ul>
+        </div>
+        <!-- Newsletter form -->
+        <form action="#">
+            <fieldset>
+                <h3>Newsletter</h3>
+                <p>Subscribe to our newsletter</p>
+
+                <label for="email" class="sr-only">Your e-mail</label>
+                <input type="email" placeholder="Your e-mail." id="email">
+                <p>@ 2023 Novas.</p>
+            </fieldset>
+        </form>
+    </footer>
     
 </body>
 </html>
