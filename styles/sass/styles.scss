@@ -1,8 +1,9 @@
 // partials for project
 @use "./partials/setup";
 @use "./partials/variables";
-@use "./partials/genericStyling"
-
+@use "./partials/genericStyling";
+@use "./partials/headerStyling";
+@use "./partials/mixins";
 // TO-DO
 // 1. Start the generic styling
 // 2. Style the header
