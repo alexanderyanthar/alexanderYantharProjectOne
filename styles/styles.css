@@ -245,12 +245,13 @@ img {
   display: block;
 }
 
-button,
 h1,
 h2,
 nav,
-p {
+p,
+ul {
   margin: 0;
+  padding: 0;
   font-size: 1rem;
   font-weight: 500;
   color: #333;
@@ -285,6 +286,7 @@ header .navBar nav ul {
 }
 header .navBar nav ul a {
   color: #333;
+  text-transform: uppercase;
 }
 header .headerContainer {
   background-image: url(../../../assets/home.jpg);
@@ -335,4 +337,54 @@ header .headerContainer .wrapper p {
 .catalogueContainer .imgContainer1,
 .catalogueContainer .imgContainer3 {
   margin-top: 3rem;
+}
+
+.featuredSales {
+  width: 90%;
+  margin: 0 auto;
+}
+.featuredSales h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #333;
+}
+.featuredSales .featuredContainer .mainContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.featuredSales .featuredContainer .mainContainer .mainContainerItems {
+  border: 1px solid #666;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  width: calc(20% - 2rem);
+  text-align: left;
+  padding: 1rem;
+}
+.featuredSales .featuredContainer .mainContainer .mainContainerItems .individualItem {
+  display: flex;
+  flex-direction: column;
+}
+.featuredSales .featuredContainer .mainContainer .mainContainerItems .individualItem span {
+  text-decoration-line: line-through;
+}
+.featuredSales .featuredContainer .mainContainer .mainContainerItems .itemTextContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.featuredSales .featuredContainer .mainContainer .mainContainerItems .itemTextContainer .iconContainer {
+  border: 1px solid #666;
+  padding: 0.25rem;
+}
+.featuredSales .featuredContainer .mainContainer .mainContainerItems .itemTextContainer .textContainer {
+  line-height: 1.5rem;
+}
+.featuredSales .featuredContainer .mainContainer .mainContainerItems .itemTextContainer .textContainer .price {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #666;
 }

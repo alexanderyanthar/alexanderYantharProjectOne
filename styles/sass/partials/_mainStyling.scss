@@ -2,15 +2,10 @@
 @use "./mixins" as *;
 @use "./variables" as *;
 
-// TO DO
-// 1. turn images into flex container
-// 2. overlay buttons on top of images
-// 3. Style buttons
-// 4. stagger the images nicely
-// 5. fix image sizing
-// ** Should I put content in wrapper?
 
 // Section 1 - Catalogue
+// TO-DO
+// 1. Add hover animation to anchor tag
 .catalogueContainer {
 
     .wrapper {
@@ -37,6 +32,65 @@
     .imgContainer1,
     .imgContainer3 {
         margin-top: 3rem;
+    }
+}
+
+// Section 2 - Featured Sale
+// TO-DO
+// 1. Add underline hover animation
+.featuredSales {
+    width: 90%;
+    margin: 0 auto;
+    h2 {
+        text-align: center;
+        @include fontStyle(2rem);
+    }
+
+    .featuredContainer .mainContainer {
+        display: flex;
+        flex-wrap: wrap;
+
+        .mainContainerItems {
+            border: 1px solid $lightGrey;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 1rem;
+            width: calc(20% - 2rem);
+            text-align: left;
+            padding: 1rem;
+
+            .individualItem {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .individualItem span {
+                text-decoration-line: line-through;
+            }
+
+            .itemTextContainer {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+
+
+            .iconContainer {
+                border: 1px solid $lightGrey;
+                padding: 0.25rem;
+            }
+
+            .textContainer {
+                line-height: 1.5rem;
+
+                .price {
+                    @include fontStyle(1rem, $regular, $lightGrey);
+                }
+            }
+            }
+        }
     }
 }
 

@@ -17,12 +17,14 @@ img {
    @include imgSize();
 }
 
-button,
+
 h1,
 h2,
 nav,
-p {
+p,
+ul {
     margin: 0;
+    padding: 0;
     @include fontStyle(1rem)
 }
 
