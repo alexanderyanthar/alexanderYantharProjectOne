@@ -1,0 +1,42 @@
+// importing scss files to use
+@use "./mixins" as *;
+@use "./variables" as *;
+
+// TO DO
+// 1. turn images into flex container
+// 2. overlay buttons on top of images
+// 3. Style buttons
+// 4. stagger the images nicely
+// 5. fix image sizing
+// ** Should I put content in wrapper?
+
+// Section 1 - Catalogue
+.catalogueContainer {
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+    }
+
+    .imgContainer {
+        width: 33%;
+        margin: 1rem;
+
+        a {
+            position: relative;
+            bottom: 2.5rem;
+            background-color: $white;
+            border: none;
+            @include fontStyle(1rem, $medium);
+            padding: 0.5rem 1rem;
+        }
+    }
+
+    .imgContainer1,
+    .imgContainer3 {
+        margin-top: 3rem;
+    }
+}
+

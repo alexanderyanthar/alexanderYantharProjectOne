@@ -1,10 +1,12 @@
 @use "./variables" as *;
 
 // fonts
-@mixin fontStyle($sizeValue, $colorValue: $darkGrey) {
+@mixin fontStyle($sizeValue: 125%, $weightValue: $medium, $colorValue: $darkGrey) {
     font-size: $sizeValue;
+    font-weight: $weightValue;
     color: $colorValue;
 }
+
 
 // general styling
 // images

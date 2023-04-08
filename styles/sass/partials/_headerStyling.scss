@@ -1,3 +1,4 @@
+// importing scss files to use
 @use "./variables" as *;
 @use "./mixins" as *;
 
@@ -15,7 +16,7 @@ header {
         // 1. Add hover animation
         // use this: https: //www.30secondsofcode.org/css/s/hover-underline-animation/
         nav {
-            width: 33%;
+            width: 25%;
 
             ul {
                 display: flex;
@@ -45,6 +46,10 @@ header {
             h1 {
                 @include fontStyle(3rem);
                 padding-bottom: 1rem;
+            }
+
+            p {
+                @include fontStyle(1rem, $regular, $darkGrey);
             }
         }
 

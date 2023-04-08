@@ -226,8 +226,10 @@ template {
   overflow: hidden;
 }
 
-html {
+html,
+body {
   font-size: 125%;
+  font-weight: 500;
   color: #333;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
@@ -243,13 +245,15 @@ img {
   display: block;
 }
 
+button,
 h1,
 h2,
 nav,
 p {
-  font-size: 500;
-  color: #333;
   margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
 }
 
 ul {
@@ -273,7 +277,7 @@ header .navBar img {
      object-fit: contain;
 }
 header .navBar nav {
-  width: 33%;
+  width: 25%;
 }
 header .navBar nav ul {
   display: flex;
@@ -298,6 +302,37 @@ header .headerContainer .wrapper {
 }
 header .headerContainer .wrapper h1 {
   font-size: 3rem;
+  font-weight: 500;
   color: #333;
   padding-bottom: 1rem;
+}
+header .headerContainer .wrapper p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #333;
+}
+
+.catalogueContainer .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+.catalogueContainer .imgContainer {
+  width: 33%;
+  margin: 1rem;
+}
+.catalogueContainer .imgContainer a {
+  position: relative;
+  bottom: 2.5rem;
+  background-color: #fff;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  padding: 0.5rem 1rem;
+}
+.catalogueContainer .imgContainer1,
+.catalogueContainer .imgContainer3 {
+  margin-top: 3rem;
 }

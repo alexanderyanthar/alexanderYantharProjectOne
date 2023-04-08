@@ -1,8 +1,10 @@
+// importing scss files to use
 @use "./variables" as *;
 @use "./mixins" as *;
 
-html {
-    @include fontStyle(125%);
+html,
+body {
+    @include fontStyle(125%, $medium, $darkGrey);
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
@@ -15,12 +17,13 @@ img {
    @include imgSize();
 }
 
+button,
 h1,
 h2,
 nav,
 p {
-    @include fontStyle($medium);
     margin: 0;
+    @include fontStyle(1rem)
 }
 
 ul {
