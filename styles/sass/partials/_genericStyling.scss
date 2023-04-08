@@ -20,6 +20,7 @@ h2,
 nav,
 p {
     @include fontStyle($medium);
+    margin: 0;
 }
 
 ul {

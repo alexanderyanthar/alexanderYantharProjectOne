@@ -249,6 +249,7 @@ nav,
 p {
   font-size: 500;
   color: #333;
+  margin: 0;
 }
 
 ul {
@@ -271,6 +272,32 @@ header .navBar img {
   -o-object-fit: contain;
      object-fit: contain;
 }
+header .navBar nav {
+  width: 33%;
+}
 header .navBar nav ul {
   display: flex;
+  justify-content: space-between;
+}
+header .navBar nav ul a {
+  color: #333;
+}
+header .headerContainer {
+  background-image: url(../../../assets/home.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+header .headerContainer .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding-right: 50%;
+}
+header .headerContainer .wrapper h1 {
+  font-size: 3rem;
+  color: #333;
+  padding-bottom: 1rem;
 }

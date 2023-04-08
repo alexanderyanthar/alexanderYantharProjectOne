@@ -6,11 +6,6 @@
     color: $colorValue;
 }
 
-// colours
-@mixin fontColour($colorValue) {
-    color: $colorValue;
-}
-
 // general styling
 // images
 @mixin imgSize($imgHeight: auto, $imgMaxWidth: 100%, $imgDisplay: block) {

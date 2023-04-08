@@ -11,9 +11,42 @@ header {
         img {
             object-fit: contain;
         }
+        // TO DO
+        // 1. Add hover animation
+        // use this: https: //www.30secondsofcode.org/css/s/hover-underline-animation/
+        nav {
+            width: 33%;
 
-        nav ul {
-            display: flex;
+            ul {
+                display: flex;
+                justify-content: space-between;
+
+                a {
+                    color: $darkGrey;
+                }
+            }
         }
+    }
+
+    .headerContainer {
+        background-image: url(../../../assets/home.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            padding-right: 50%;
+
+            h1 {
+                @include fontStyle(3rem);
+                padding-bottom: 1rem;
+            }
+        }
+
     }
 }
