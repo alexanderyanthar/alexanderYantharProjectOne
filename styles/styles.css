@@ -354,11 +354,14 @@ header .headerContainer .wrapper p {
 }
 .featuredSales .viewAll button {
   border: 2px solid #666;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #333;
   background-color: #fff;
   padding: 1rem 2rem;
 }
 .featuredSales .featuredContainer {
-  padding: 3rem 0;
+  padding: 2rem 0;
 }
 .featuredSales .featuredContainer .mainContainer {
   display: flex;
@@ -415,4 +418,75 @@ header .headerContainer .wrapper p {
   font-size: 0.75rem;
   font-weight: 400;
   color: #666;
+}
+
+.majorSales .wrapper {
+  display: flex;
+  align-items: center;
+  padding: 5rem 0;
+  margin-top: 2rem;
+}
+.majorSales .wrapper .saleContainer1,
+.majorSales .wrapper .saleContainer2 {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.majorSales .wrapper .saleContainer1 {
+  width: 33%;
+  background-image: url(../../../assets/vert1.jpg);
+  margin-right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+}
+.majorSales .wrapper .saleContainer1 .textContainer {
+  padding-bottom: 3rem;
+  width: 75%;
+}
+.majorSales .wrapper .saleContainer1 .textContainer .saleText {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #d7b89c;
+  background-color: #fff;
+  margin: 0 3rem;
+}
+.majorSales .wrapper .saleContainer1 .textContainer .saleAmount {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  padding: 1.6rem 0;
+}
+.majorSales .wrapper .saleContainer1 .textContainer a {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+}
+.majorSales .wrapper .saleContainer1 .textContainer a i {
+  padding: 0.3rem;
+}
+.majorSales .wrapper .saleContainer2 {
+  width: 66%;
+  background-image: url(../../../assets/vert2.jpg);
+}
+.majorSales .wrapper .saleContainer2 .textContainer {
+  border: 1px solid #fff;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 5rem;
+  padding: 1rem;
+  text-align: center;
+}
+.majorSales .wrapper .saleContainer2 .textContainer p {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #fff;
+}
+.majorSales .wrapper .saleContainer2 .textContainer span {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #fff;
 }
