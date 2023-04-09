@@ -22,3 +22,8 @@
     max-width: $wrapperMaxWidth;
     width: $wrapperWidth;
 }
+
+// border for featured sales, view all button, and checkout icon
+@mixin borderStyle($borderSize: 1px, $borderType: solid, $borderColor: $lightGrey) {
+    border: $borderSize $borderType $borderColor;
+}

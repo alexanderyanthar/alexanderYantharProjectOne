@@ -46,12 +46,27 @@
         @include fontStyle(2rem);
     }
 
+    .viewAll {
+        text-align: center;
+
+        button {
+            @include borderStyle(2px);
+            background-color: $white;
+            padding: 1rem 2rem;
+        }
+    }
+
+    .featuredContainer {
+        padding: 3rem 0;
+
+    }
+
     .featuredContainer .mainContainer {
         display: flex;
         flex-wrap: wrap;
 
         .mainContainerItems {
-            border: 1px solid $lightGrey;
+            @include borderStyle();
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -59,16 +74,44 @@
             margin: 1rem;
             width: calc(20% - 2rem);
             text-align: left;
-            padding: 1rem;
+            padding: 0.5rem;
+            
 
             .individualItem {
                 display: flex;
                 flex-direction: column;
+
+                .hidden {
+                    visibility: hidden;
+                }
+
+                .sale,
+                .new {
+                    color: $white;
+                    width: 25%;
+                    text-align: center;
+                    position: relative;
+                    left: -0.5rem;
+                }
+
+                .sale {
+                    background-color: $pink;
+                }
+
+                .new {
+                    background-color: $blue;
+
+                }
             }
 
             .individualItem span {
                 text-decoration-line: line-through;
             }
+
+            // .itemTextContainer1,
+            // .itemTextContainer3 {
+            //     margin-bottom: 1rem;
+            // }
 
             .itemTextContainer {
                 display: flex;
@@ -78,15 +121,15 @@
 
 
             .iconContainer {
-                border: 1px solid $lightGrey;
-                padding: 0.25rem;
+                @include borderStyle();
+                padding: 0.1rem;
             }
 
             .textContainer {
-                line-height: 1.5rem;
+                line-height: 1.2rem;
 
                 .price {
-                    @include fontStyle(1rem, $regular, $lightGrey);
+                    @include fontStyle(0.75rem, $regular, $lightGrey);
                 }
             }
             }
