@@ -312,84 +312,82 @@
     </main>
 
     <footer>
-        <!-- logo/icon section -->
-        <div>
-            <img src="./assets/logo-white.png" alt="Novas Boutique Shop logo">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, doloribus.</p>
-            <ul>
-                <li>
-                    <!-- need to fix height of svg files -->
-                    <a href="#facebook">
-                        <img src="./assets/icons/facebook.svg" alt="link to Novas' facebook page">
-                    </a>
-                </li>
-                <li>
-                    <a href="#twitter">
-                        <img src="./assets/icons/twitter.svg" alt="Link to Nova's twitter">
-                    </a>
-                </li>
-                <li>
-                    <a href="#instagram">
-                        <img src="./assets/icons/instagram.svg" alt="Link to Novas' instagram page">
-                    </a>
-                </li>
-            </ul>
+        <div class="wrapper">
+            <!-- logo/icon section -->
+            <div class="logoIcons">
+                <img class="logo" src="./assets/logo-white.png" alt="Novas Boutique Shop logo">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, doloribus.</p>
+                <ul>
+                    <li>
+                        <!-- need to fix size of svg files -->
+                        <a href="#facebook">
+                            <img src="./assets/icons/facebook.svg" alt="link to Novas' facebook page">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#twitter">
+                            <img src="./assets/icons/twitter.svg" alt="Link to Nova's twitter">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#instagram">
+                            <img src="./assets/icons/instagram.svg" alt="Link to Novas' instagram page">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Contact info -->
+            <div class="contact">
+                <h3>Contact</h3>
+                <ul>
+                    <li>
+                        <a href="#address"><img src="./assets/icons/address.svg" alt="Link to show address to Novas' shop in google maps"> No 40 Baria Street</a>
+                    </li>
+                    <li>
+                        <a href="#phone"><img src="./assets/icons/telephone.svg" alt="Link to call Novas' phone"> 156-366-6666</a>
+                    </li>
+                    <li>
+                        <a href="#email"><img src="./assets/icons/email.svg" alt="Link to Novas' email address"> cool@example.com</a>
+                    </li>
+                    <li>
+                        <a href="#website"><img src="./assets/icons/globe.svg" alt="Link to Novas' website"> www.novas.com</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Profile section -->
+            <div class="userProfile">
+                <h3>Profile</h3>
+                <ul>
+                    <li>
+                        <a href="#account"><img src="./assets/icons/user.svg" alt="Link to your account"> My Account</a>
+                    </li>
+                    <li>
+                        <a href="#checkout"><img src="./assets/icons/checkout.svg" alt="Link to your checkout"> Checkout</a>
+                    </li>
+                    <li>
+                        <a href="#tracking"><img src="./assets/icons/tracking.svg" alt="Link to see order tracking"> Order Tracking</a>
+                    </li>
+                    <li>
+                        <a href="#help"><img src="./assets/icons/support.svg" alt="Link to get access to help and support"> Help & Support</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Newsletter form -->
+            <div class="form">
+                <form action="#">
+                    <fieldset>
+                        <h3>Newsletter</h3>
+                        <p>Subscribe to our newsletter</p>
+                
+                        <label for="email" class="sr-only">Your e-mail</label>
+                        <input type="email" placeholder="Your e-mail." id="email">
+                        <p>@ 2023 Novas.</p>
+                    </fieldset>
+                </form>
+            </div>
+            
         </div>
-        <!-- Contact info -->
-        <div>
-            <h3>Contact</h3>
-            <ul>
-                <li>
-                    <img src="./assets/icons/address.svg" alt="Link to show address to Novas' shop in google maps">
-                    <p>No 40 Baria Street</p>
-                </li>
-                <li>
-                    <img src="./assets/icons/telephone.svg" alt="Link to call Novas' phone">
-                    <p>156-366-6666</p>
-                </li>
-                <li>
-                    <img src="./assets/icons/email.svg" alt="Link to Novas' email address">
-                    <p>cool@example.com</p>
-                </li>
-                <li>
-                    <img src="./assets/icons/globe.svg" alt="Link to Novas' website">
-                    <a href="#">www.novas.com</a>
-                </li>
-            </ul>
-        </div>
-        <!-- Profile section -->
-        <div>
-            <h3>Profile</h3>
-            <ul>
-                <li>
-                    <img src="./assets/icons/user.svg" alt="Link to your account">
-                    <a href="#account">My Account</a>
-                </li>
-                <li>
-                    <img src="./assets/icons/checkout.svg" alt="Link to your checkout">
-                    <a href="#checkout">Checkout</a>
-                </li>
-                <li>
-                    <img src="./assets/icons/tracking.svg" alt="Link to see order tracking">
-                    <a href="#tracking">Order Tracking</a>
-                </li>
-                <li>
-                    <img src="./assets/icons/support.svg" alt="Link to get access to help and support">
-                    <a href="#help">Help & Support</a>
-                </li>
-            </ul>
-        </div>
-        <!-- Newsletter form -->
-        <form action="#">
-            <fieldset>
-                <h3>Newsletter</h3>
-                <p>Subscribe to our newsletter</p>
-
-                <label for="email" class="sr-only">Your e-mail</label>
-                <input type="email" placeholder="Your e-mail." id="email">
-                <p>@ 2023 Novas.</p>
-            </fieldset>
-        </form>
+        
     </footer>
     
 </body>

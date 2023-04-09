@@ -1,0 +1,131 @@
+// Importing mixins and variables
+@use "./mixins" as *;
+@use "./variables" as *;
+
+// footer styling
+footer {
+    background-color: $darkGrey;
+
+    .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 60vh;
+        // remove border
+        border: 1px solid white;
+
+        h3,
+        p,
+        a {
+            color: $white;
+        }
+
+        // refractor and condense contianer code into one styling unit
+        // logoIcons, contact, profile, forms can be one
+        // contact and profile are excatly ethe same styling so they can all h ave one class
+
+        .logoIcons {
+            // remove border
+            border: 1px solid white;
+            width: 25%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .logo {
+                width: 50%;
+            }
+
+            p {
+                padding: 1.5rem 0;
+            }
+
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 50%;
+            }
+
+            ul li {
+                width: 1rem;
+            }
+
+            li:first-child {
+                width: 0.7rem;
+            }
+        }
+
+        // contact 
+        .contact {
+            width: 25%;
+            // remove border
+            border: 1px solid white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 50%;
+
+            h3 {
+                margin-bottom: 1rem;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                li {
+                    margin-bottom: 1rem;
+                }
+
+                li:last-child {
+                    margin-bottom: 0;
+                }
+
+                li img {
+                    width: 1rem;
+                    display: inline-block;
+                    margin-right: 0.25rem;
+                }
+            }
+        }
+
+        .userProfile {
+            width: 25%;
+            // remove border
+            border: 1px solid white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 50%;
+
+            h3 {
+                margin-bottom: 1rem;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                li {
+                    margin-bottom: 1rem;
+                }
+
+                li:last-child {
+                    margin-bottom: 0;
+                }
+
+                li img {
+                    width: 1rem;
+                    display: inline-block;
+                    margin-right: 0.25rem;
+                }
+            }
+        }
+
+        // finish styling form
+    }
+}

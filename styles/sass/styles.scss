@@ -4,10 +4,5 @@
 @use "./partials/mixins";
 @use "./partials/genericStyling";
 @use "./partials/headerStyling";
-@use "./partials/mainStyling"
-// TO-DO
-// 1. Start the generic styling
-// 2. Style the header
-    // a. Add background image
-    // b. Style navbar
-    // c. add hover and focus elements/transitions to nav list
+@use "./partials/mainStyling";
+@use "./partials/footerStyling";

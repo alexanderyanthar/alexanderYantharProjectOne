@@ -248,6 +248,7 @@ img {
 
 h1,
 h2,
+h3,
 nav,
 p,
 ul {
@@ -494,6 +495,7 @@ header .headerContainer .wrapper p {
 
 .followInstagram .wrapper {
   text-align: center;
+  margin-bottom: 5rem;
 }
 .followInstagram .wrapper h2 {
   margin-top: 4rem;
@@ -516,4 +518,100 @@ header .headerContainer .wrapper p {
 }
 .followInstagram .wrapper .gallery li:last-child {
   margin-right: 0;
+}
+
+footer {
+  background-color: #333;
+}
+footer .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60vh;
+  border: 1px solid white;
+}
+footer .wrapper h3,
+footer .wrapper p,
+footer .wrapper a {
+  color: #fff;
+}
+footer .wrapper .logoIcons {
+  border: 1px solid white;
+  width: 25%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+footer .wrapper .logoIcons .logo {
+  width: 50%;
+}
+footer .wrapper .logoIcons p {
+  padding: 1.5rem 0;
+}
+footer .wrapper .logoIcons ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
+footer .wrapper .logoIcons ul li {
+  width: 1rem;
+}
+footer .wrapper .logoIcons li:first-child {
+  width: 0.7rem;
+}
+footer .wrapper .contact {
+  width: 25%;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
+}
+footer .wrapper .contact h3 {
+  margin-bottom: 1rem;
+}
+footer .wrapper .contact ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+footer .wrapper .contact ul li {
+  margin-bottom: 1rem;
+}
+footer .wrapper .contact ul li:last-child {
+  margin-bottom: 0;
+}
+footer .wrapper .contact ul li img {
+  width: 1rem;
+  display: inline-block;
+  margin-right: 0.25rem;
+}
+footer .wrapper .userProfile {
+  width: 25%;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50%;
+}
+footer .wrapper .userProfile h3 {
+  margin-bottom: 1rem;
+}
+footer .wrapper .userProfile ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+footer .wrapper .userProfile ul li {
+  margin-bottom: 1rem;
+}
+footer .wrapper .userProfile ul li:last-child {
+  margin-bottom: 0;
+}
+footer .wrapper .userProfile ul li img {
+  width: 1rem;
+  display: inline-block;
+  margin-right: 0.25rem;
 }
