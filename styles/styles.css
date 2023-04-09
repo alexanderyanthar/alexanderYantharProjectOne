@@ -237,6 +237,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #333;
 }
 
 img {
@@ -489,4 +490,30 @@ header .headerContainer .wrapper p {
   font-size: 4rem;
   font-weight: 700;
   color: #fff;
+}
+
+.followInstagram .wrapper {
+  text-align: center;
+}
+.followInstagram .wrapper h2 {
+  margin-top: 4rem;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #333;
+}
+.followInstagram .wrapper a {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #666;
+}
+.followInstagram .wrapper .gallery {
+  display: flex;
+  margin: 3rem 0;
+}
+.followInstagram .wrapper .gallery li {
+  margin-right: 1rem;
+}
+.followInstagram .wrapper .gallery li:last-child {
+  margin-right: 0;
 }

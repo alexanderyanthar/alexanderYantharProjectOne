@@ -207,3 +207,31 @@
     }
 }
 
+// Section 4 - Instagram
+.followInstagram .wrapper {
+    text-align: center;
+
+    h2 {
+        margin-top: 4rem;
+        margin-bottom: 0.5rem;
+        @include fontStyle(2rem);
+    }
+
+    a {
+        @include fontStyle(1rem, $regular, $lightGrey);
+    }
+
+    .gallery {
+        display: flex;
+        margin: 3rem 0;
+
+        li {
+            margin-right: 1rem;
+        }
+
+        li:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
