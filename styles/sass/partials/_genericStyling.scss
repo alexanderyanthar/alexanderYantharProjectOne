@@ -14,6 +14,13 @@ a {
     color: $darkGrey
 }
 
+button {
+    @include borderStyle(2px);
+    @include fontStyle(1rem, $regular);
+    background-color: $white;
+    padding: 1rem 2rem;
+}
+
 img {
    @include imgSize();
 }
