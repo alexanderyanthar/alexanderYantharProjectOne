@@ -1,0 +1,109 @@
+// importing mixins and variables
+@use "./mixins" as *;
+@use "./variables" as *;
+
+// Laptop size
+
+@media (max-width: $largeLaptop) {
+    // need to find a way to reduce the size
+    // main section 2 -features sales
+    .featuredSales .featuredContainer .mainContainer .mainContainerItems .individualItem .sale,
+    .featuredSales .featuredContainer .mainContainer .mainContainerItems .individualItem .new {
+        width: 50%;
+    }
+}
+
+@media (max-width: $tablet) {
+    // main section 2 - featured sales
+    .featuredSales .featuredContainer .mainContainer .mainContainerItems {
+        width: calc(33% - 2rem);
+    }
+
+    // main section 3 - major sales
+    .majorSales .wrapper {
+        flex-direction: column;
+
+        .saleContainer1,
+        .saleContainer2 {
+            height: 50vh;
+            width: 100%;
+        }
+
+        .saleContainer1 {
+            margin-right: 0;
+            justify-content: center;
+
+            .textContainer .saleAmount {
+                @include fontStyle(3rem, $bold, $pink)
+            }
+        }
+
+        .saleContainer2 .textContainer{
+            width: 80%;
+            margin-top: 2rem;
+
+            p {
+                font-size: 1.5rem;
+                @include fontStyle(1.5rem, $medium, $lightGrey)
+            }
+
+            span {
+                @include fontStyle(2.7rem, $bold, $pink);
+            }
+        }
+    }
+
+    .majorSales .wrapper .saleContainer1 {
+        margin-right: 0;
+    }
+
+    // footer
+    footer .wrapper {
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .logoIcons,
+        .form {
+            width: 100%;
+            align-items: center;
+            margin: 1rem 0;
+        }
+
+        .logoIcons {
+            padding-bottom: 1rem;
+            border-bottom: 1px solid $white;
+            text-align: center;
+
+            .logo {
+                width: 25%;
+            }
+
+            ul {
+                width: 50%;
+            }
+        }
+
+        .form {
+            padding-top: 1rem;
+            border-top: 1px solid $white;
+            text-align: center;
+
+            form {
+                width: 100%;
+
+                input[type=email] {
+                    margin-top: 1rem;
+                }
+            }
+        }
+
+        .contact,
+        .userProfile {
+            align-items: center;
+            margin: 1rem 0;
+            height: auto;
+            width: calc(50% - 2rem);
+        }
+    }
+}

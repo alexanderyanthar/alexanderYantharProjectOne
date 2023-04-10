@@ -233,6 +233,11 @@ body {
   color: #333;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
 }
 
 a {
@@ -666,6 +671,7 @@ footer .wrapper .form form fieldset {
 footer .wrapper .form form fieldset [type=email] {
   background-color: #333;
   padding-bottom: 0.5rem;
+  width: 100%;
 }
 
 main .wrapper fieldset {
@@ -678,4 +684,91 @@ main .wrapper fieldset {
 }
 main .wrapper fieldset button {
   width: 35%;
+}
+
+@media (max-width: 1479px) {
+  .featuredSales .featuredContainer .mainContainer .mainContainerItems .individualItem .sale,
+  .featuredSales .featuredContainer .mainContainer .mainContainerItems .individualItem .new {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .featuredSales .featuredContainer .mainContainer .mainContainerItems {
+    width: calc(33% - 2rem);
+  }
+  .majorSales .wrapper {
+    flex-direction: column;
+  }
+  .majorSales .wrapper .saleContainer1,
+  .majorSales .wrapper .saleContainer2 {
+    height: 50vh;
+    width: 100%;
+  }
+  .majorSales .wrapper .saleContainer1 {
+    margin-right: 0;
+    justify-content: center;
+  }
+  .majorSales .wrapper .saleContainer1 .textContainer .saleAmount {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #eba0aa;
+  }
+  .majorSales .wrapper .saleContainer2 .textContainer {
+    width: 80%;
+    margin-top: 2rem;
+  }
+  .majorSales .wrapper .saleContainer2 .textContainer p {
+    font-size: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #666;
+  }
+  .majorSales .wrapper .saleContainer2 .textContainer span {
+    font-size: 2.7rem;
+    font-weight: 700;
+    color: #eba0aa;
+  }
+  .majorSales .wrapper .saleContainer1 {
+    margin-right: 0;
+  }
+  footer .wrapper {
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  footer .wrapper .logoIcons,
+  footer .wrapper .form {
+    width: 100%;
+    align-items: center;
+    margin: 1rem 0;
+  }
+  footer .wrapper .logoIcons {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #fff;
+    text-align: center;
+  }
+  footer .wrapper .logoIcons .logo {
+    width: 25%;
+  }
+  footer .wrapper .logoIcons ul {
+    width: 50%;
+  }
+  footer .wrapper .form {
+    padding-top: 1rem;
+    border-top: 1px solid #fff;
+    text-align: center;
+  }
+  footer .wrapper .form form {
+    width: 100%;
+  }
+  footer .wrapper .form form input[type=email] {
+    margin-top: 1rem;
+  }
+  footer .wrapper .contact,
+  footer .wrapper .userProfile {
+    align-items: center;
+    margin: 1rem 0;
+    height: auto;
+    width: calc(50% - 2rem);
+  }
 }

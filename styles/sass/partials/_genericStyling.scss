@@ -7,6 +7,11 @@ body {
     @include fontStyle(125%, $medium, $darkGrey);
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
 }
 
 a {
