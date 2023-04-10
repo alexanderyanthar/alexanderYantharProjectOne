@@ -61,7 +61,8 @@
     footer .wrapper {
         height: auto;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
+        margin: 0 auto;
 
         .logoIcons,
         .form {
@@ -103,7 +104,126 @@
             align-items: center;
             margin: 1rem 0;
             height: auto;
-            width: calc(50% - 2rem);
+            width: calc(45% - 2rem);
         }
     }
+}
+
+@media (max-width: $phone) {
+    // header section
+    header {
+        .navBar {
+            .hamburgerMenu {
+                    display: block;
+                }
+
+            img {
+                display: none;
+            }
+
+            nav {
+                display: none;
+            }
+        }
+
+        .headerContainer {
+            height: 60vh;
+            .wrapper {
+                margin: 0 auto;
+                justify-content: flex-start;
+                padding-top: 2rem;
+                text-align: center;
+                padding-right: 0;
+            }
+        }
+    }
+
+    // Section 1 - Catalogue
+    .catalogueContainer {
+
+        .wrapper {
+            margin: 0 auto;
+            padding: 0;
+            flex-direction: column;
+        }
+
+        .imgContainer {
+            width: 100%;
+            margin: 0rem;
+        }
+
+        .imgContainer3 {
+            padding-bottom: 2rem;
+        }
+    }
+
+    // Section 2 - featured sale
+    .featuredSales {
+        width: 100%;
+
+        .featuredContainer .mainContainer {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .mainContainerItems {
+                width: calc(80% - 2rem);
+            }
+
+            .mainContainerItems:nth-of-type(6),
+            .mainContainerItems:nth-of-type(7),
+            .mainContainerItems:nth-of-type(8),
+            .mainContainerItems:nth-of-type(9),
+            .mainContainerItems:nth-of-type(10) {
+                display: none;
+            }
+        }
+    }
+
+    // section 3 - major sales
+    .majorSales .wrapper {
+        margin-top: 0;
+    }
+
+    // Section 4 - instagram
+    .followInstagram .wrapper {
+
+        h2 {
+            margin-top: 0;
+        }
+
+        .gallery {
+            flex-direction: column;
+            align-items: center;
+
+            li {
+                margin-right: 0;
+                margin-bottom: 1rem;
+                width: 85%;
+            }
+
+            li:nth-of-type(2),
+            li:nth-of-type(3) {
+                display: none;
+            }
+        }
+    }
+
+    // footer
+    footer .wrapper {
+        .contact,
+        .userProfile {
+            width: 100%;
+            margin-top: 0;
+            border-bottom: 1px solid $white;
+            padding-bottom: 1rem;
+        }
+
+        .form {
+            border-top: none;
+            padding-top: 0; 
+            margin-top: 0;
+        }
+    }
+
 }

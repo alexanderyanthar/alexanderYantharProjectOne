@@ -9,6 +9,10 @@ header {
         align-items: center;
         padding: 1.5rem 2rem;
 
+        .hamburgerMenu {
+            display: none;
+        }
+
         img {
             object-fit: contain;
         }
