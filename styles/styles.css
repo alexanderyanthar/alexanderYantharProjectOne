@@ -528,15 +528,21 @@ footer .wrapper {
   align-items: center;
   justify-content: space-between;
   height: 60vh;
-  border: 1px solid white;
+}
+footer .wrapper h3 {
+  font-size: 1.25rem;
 }
 footer .wrapper h3,
 footer .wrapper p,
 footer .wrapper a {
   color: #fff;
 }
+footer .wrapper .logoIcons,
+footer .wrapper .contact,
+footer .wrapper .userProfile {
+  margin-right: 1rem;
+}
 footer .wrapper .logoIcons {
-  border: 1px solid white;
   width: 25%;
   height: 50%;
   display: flex;
@@ -563,7 +569,6 @@ footer .wrapper .logoIcons li:first-child {
 }
 footer .wrapper .contact {
   width: 25%;
-  border: 1px solid white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -590,7 +595,6 @@ footer .wrapper .contact ul li img {
 }
 footer .wrapper .userProfile {
   width: 25%;
-  border: 1px solid white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -614,4 +618,29 @@ footer .wrapper .userProfile ul li img {
   width: 1rem;
   display: inline-block;
   margin-right: 0.25rem;
+}
+footer .wrapper .form {
+  width: 25%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .wrapper .form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+footer .wrapper .form form p {
+  margin-top: 1rem;
+}
+footer .wrapper .form form fieldset {
+  border: none;
+  padding: 0;
+}
+footer .wrapper .form form fieldset [type=email] {
+  background-color: #333;
+  color: #666;
+  border: none;
+  border-bottom: 1px solid #666;
+  padding-bottom: 0.5rem;
 }

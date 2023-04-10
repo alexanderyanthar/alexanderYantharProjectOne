@@ -11,8 +11,10 @@ footer {
         align-items: center;
         justify-content: space-between;
         height: 60vh;
-        // remove border
-        border: 1px solid white;
+
+        h3 {
+            font-size: 1.25rem;
+        }
 
         h3,
         p,
@@ -22,11 +24,15 @@ footer {
 
         // refractor and condense contianer code into one styling unit
         // logoIcons, contact, profile, forms can be one
-        // contact and profile are excatly ethe same styling so they can all h ave one class
+        // contact and profile are excatly ethe same styling so they can all have one class
+
+        .logoIcons,
+        .contact,
+        .userProfile {
+            margin-right: 1rem;
+        }
 
         .logoIcons {
-            // remove border
-            border: 1px solid white;
             width: 25%;
             height: 50%;
             display: flex;
@@ -60,8 +66,6 @@ footer {
         // contact 
         .contact {
             width: 25%;
-            // remove border
-            border: 1px solid white;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -92,10 +96,9 @@ footer {
             }
         }
 
+        // user profile
         .userProfile {
             width: 25%;
-            // remove border
-            border: 1px solid white;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -126,6 +129,35 @@ footer {
             }
         }
 
-        // finish styling form
+        // newsletter form
+        .form {
+            width: 25%;
+            height: 50%;
+            display: flex;
+            justify-content: space-between;
+
+            form{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                p {
+                    margin-top: 1rem;
+                }
+
+                fieldset {
+                    border: none;
+                    padding: 0;
+                }
+
+                fieldset [type=email] {
+                    background-color: $darkGrey;
+                    color: $lightGrey;
+                    border: none;
+                    border-bottom: 1px solid $lightGrey;
+                    padding-bottom: 0.5rem;
+                }
+            }
+        }
     }
 }
