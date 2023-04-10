@@ -1,0 +1,19 @@
+// importing mixins and variables
+@use "./mixins" as *;
+@use "./variables" as *;
+
+main .wrapper {
+
+    fieldset {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 2rem 0;
+        height: 60vh;
+        width: 50%;
+
+        button {
+            width: 35%;
+        }
+    }
+}

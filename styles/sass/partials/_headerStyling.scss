@@ -16,15 +16,18 @@ header {
         // 1. Add hover animation
         // use this: https: //www.30secondsofcode.org/css/s/hover-underline-animation/
         nav {
-            width: 25%;
-
             ul {
                 display: flex;
-                justify-content: space-between;
+                justify-content: center;
 
                 a {
                     color: $darkGrey;
                     text-transform: uppercase;
+                    margin-right: 2rem;
+                }
+
+                li:last-child {
+                    margin-right: 0;
                 }
             }
         }
@@ -64,6 +67,6 @@ header {
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        height: 40vh;
+        height: 30vh;
     }
 }

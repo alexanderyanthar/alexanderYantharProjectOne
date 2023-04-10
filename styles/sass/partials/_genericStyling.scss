@@ -21,6 +21,19 @@ button {
     padding: 1rem 2rem;
 }
 
+fieldset {
+    border: none;
+}
+
+fieldset [type=email],
+fieldset [type=text],
+fieldset textarea {
+    border: none;
+    border-bottom: 1px solid $lightGrey;
+    font-family: 'Poppins', sans-serif;
+    @include fontStyle(1rem, $regular, $lightGrey)
+}
+
 img {
    @include imgSize();
 }
