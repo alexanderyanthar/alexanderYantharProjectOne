@@ -677,16 +677,23 @@ footer .wrapper .form form fieldset [type=email] {
   width: 100%;
 }
 
-main .wrapper fieldset {
+.contactForm .wrapper fieldset {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   padding: 2rem 0;
-  height: 60vh;
+  height: auto;
   width: 50%;
 }
-main .wrapper fieldset button {
+.contactForm .wrapper fieldset [type=text],
+.contactForm .wrapper fieldset [type=email],
+.contactForm .wrapper fieldset textarea {
+  padding-top: 2rem;
+}
+.contactForm .wrapper fieldset button {
+  margin-top: 2rem;
   width: 35%;
+  text-align: center;
 }
 
 @media (max-width: 1479px) {
@@ -695,9 +702,72 @@ main .wrapper fieldset button {
     width: 50%;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
   .featuredSales .featuredContainer .mainContainer .mainContainerItems {
     width: calc(33% - 2rem);
+  }
+  .followInstagram .wrapper .gallery li:nth-of-type(2) {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  header .navBar .hamburgerMenu {
+    display: block;
+  }
+  header .navBar .checkout {
+    display: none;
+  }
+  header .navBar nav {
+    display: none;
+  }
+  header .headerContainer {
+    height: 55vh;
+  }
+  header .headerContainer .wrapper {
+    margin: 0 auto;
+    justify-content: flex-start;
+    padding-top: 4rem;
+    text-align: center;
+    padding-right: 0;
+    width: 70%;
+  }
+  .catalogueContainer .wrapper {
+    margin: 0 auto;
+    padding: 0;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .catalogueContainer .imgContainer {
+    width: 75%;
+    margin: 0;
+  }
+  .catalogueContainer .imgContainer a {
+    position: relative;
+    bottom: 4rem;
+    background-color: #fff;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    padding: 0.5rem 1rem;
+  }
+  .catalogueContainer .imgContainer1 {
+    margin-top: 3rem;
+  }
+  .catalogueContainer .imgContainer3 {
+    margin-top: 0;
+  }
+  .featuredSales h2 {
+    padding: 2rem 0;
+  }
+  .featuredSales .featuredContainer .mainContainer .mainContainerItems {
+    width: calc(50% - 2rem);
+  }
+  .featuredSales .featuredContainer .mainContainer .mainContainerItems:nth-of-type(6),
+  .featuredSales .featuredContainer .mainContainer .mainContainerItems:nth-of-type(7),
+  .featuredSales .featuredContainer .mainContainer .mainContainerItems:nth-of-type(8),
+  .featuredSales .featuredContainer .mainContainer .mainContainerItems:nth-of-type(9) {
+    display: none;
   }
   .majorSales .wrapper {
     flex-direction: column;
@@ -733,6 +803,13 @@ main .wrapper fieldset button {
   }
   .majorSales .wrapper .saleContainer1 {
     margin-right: 0;
+  }
+  .followInstagram .wrapper h2 {
+    margin-top: 1rem;
+  }
+  .followInstagram .wrapper .gallery li:nth-of-type(2),
+  .followInstagram .wrapper .gallery li:nth-of-type(3) {
+    display: none;
   }
   footer .wrapper {
     height: auto;
@@ -771,7 +848,7 @@ main .wrapper fieldset button {
   footer .wrapper .contact,
   footer .wrapper .userProfile {
     align-items: center;
-    margin: 1rem 0;
+    margin: 1rem;
     height: auto;
     width: calc(45% - 2rem);
   }
@@ -795,6 +872,15 @@ main .wrapper fieldset button {
     padding-top: 2rem;
     text-align: center;
     padding-right: 0;
+  }
+  header .contactContainer {
+    height: 25vh;
+  }
+  header .contactContainer .wrapper {
+    justify-content: center;
+  }
+  header .contactContainer .wrapper h1 {
+    font-size: 2.5rem;
   }
   .catalogueContainer .wrapper {
     margin: 0 auto;
@@ -845,6 +931,18 @@ main .wrapper fieldset button {
   .followInstagram .wrapper .gallery li:nth-of-type(3) {
     display: none;
   }
+  .contactForm .wrapper fieldset {
+    height: auto;
+    width: 90%;
+  }
+  .contactForm .wrapper fieldset [type=text],
+  .contactForm .wrapper fieldset [type=email],
+  .contactForm .wrapper fieldset textarea {
+    width: 100%;
+  }
+  .contactForm .wrapper fieldset button {
+    width: 50%;
+  }
   footer .wrapper .contact,
   footer .wrapper .userProfile {
     width: 100%;
@@ -856,5 +954,11 @@ main .wrapper fieldset button {
     border-top: none;
     padding-top: 0;
     margin-top: 0;
+  }
+}
+@media (max-width: 350px) {
+  .contactForm .wrapper fieldset button {
+    width: 50%;
+    padding: 1rem;
   }
 }

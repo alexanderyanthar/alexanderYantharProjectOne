@@ -13,12 +13,105 @@
     }
 }
 
-@media (max-width: $tablet) {
+// laptop
+@media (max-width: $laptop) {
     // main section 2 - featured sales
-    .featuredSales .featuredContainer .mainContainer .mainContainerItems {
-        width: calc(33% - 2rem);
+        .featuredSales .featuredContainer .mainContainer .mainContainerItems {
+            width: calc(33% - 2rem);
+        }
+
+    // main section 4 - instagram
+    .followInstagram .wrapper .gallery {
+        li:nth-of-type(2) {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: $tablet) {
+    // Header styling
+    header {
+        .navBar {
+            .hamburgerMenu {
+                display: block;
+            }
+
+            .checkout {
+                display: none;
+            }
+
+            nav {
+                display: none;
+            }
+        }
+        .headerContainer {
+            height: 55vh;
+
+            .wrapper {
+                margin: 0 auto;
+                justify-content: flex-start;
+                padding-top: 4rem;
+                text-align: center;
+                padding-right: 0;
+                width: 70%;
+            }
+        }
     }
 
+    // Section 1 - Catalogue
+    .catalogueContainer {
+
+        .wrapper {
+            margin: 0 auto;
+            padding: 0;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        .imgContainer {
+            width: 75%;
+            margin: 0;
+
+            a {
+                position: relative;
+                bottom: 4rem;
+                background-color: $white;
+                border: none;
+                @include fontStyle(1rem, $medium);
+                padding: 0.5rem 1rem;
+            }
+        }
+
+        .imgContainer1 {
+            margin-top: 3rem;
+        }
+
+        .imgContainer3 {
+            margin-top: 0;
+        }
+    }
+
+    // main section 2 - featured sales
+    .featuredSales {
+
+        h2 {
+            padding: 2rem 0;
+        }
+
+        .featuredContainer .mainContainer {
+            .mainContainerItems {
+                width: calc(50% - 2rem);
+            }
+    
+            .mainContainerItems:nth-of-type(6),
+            .mainContainerItems:nth-of-type(7),
+            .mainContainerItems:nth-of-type(8),
+            .mainContainerItems:nth-of-type(9) {
+                display: none;
+            }
+        }
+        
+    } 
     // main section 3 - major sales
     .majorSales .wrapper {
         flex-direction: column;
@@ -56,6 +149,21 @@
     .majorSales .wrapper .saleContainer1 {
         margin-right: 0;
     }
+
+    // main section 4 - instagram
+    .followInstagram .wrapper {
+
+        h2 {
+            margin-top: 1rem;
+        }
+
+        .gallery {
+            li:nth-of-type(2),
+            li:nth-of-type(3) {
+                display: none;
+            }
+        }
+    } 
 
     // footer
     footer .wrapper {
@@ -102,7 +210,7 @@
         .contact,
         .userProfile {
             align-items: center;
-            margin: 1rem 0;
+            margin: 1rem;
             height: auto;
             width: calc(45% - 2rem);
         }
@@ -136,6 +244,20 @@
                 padding-right: 0;
             }
         }
+
+        // contact page styling
+        .contactContainer {
+            height: 25vh;
+
+            .wrapper {
+                justify-content: center;
+
+                h1 {
+                    font-size: 2.5rem;
+                }
+            }
+        }
+        
     }
 
     // Section 1 - Catalogue
@@ -209,6 +331,22 @@
         }
     }
 
+    // contact form styling 
+    .contactForm .wrapper fieldset {
+        height: auto;
+        width: 90%;
+
+        [type=text],
+        [type=email],
+        textarea {
+            width: 100%;
+        }
+
+        button {
+            width: 50%;
+        }
+    }
+
     // footer
     footer .wrapper {
         .contact,
@@ -224,6 +362,16 @@
             padding-top: 0; 
             margin-top: 0;
         }
+    }
+
+}
+
+// small phones
+@media (max-width: $smallPhone) {
+    // contact form main styling
+    .contactForm .wrapper fieldset button {
+        width: 50%;
+        padding: 1rem;
     }
 
 }
