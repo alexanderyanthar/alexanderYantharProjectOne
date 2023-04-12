@@ -2,7 +2,7 @@
 
 **Hardest challenge so far and greatest technical win
 
-<h2>Technical wins</h2>:
+<h2>Technical wins</h2>
 <p>
 #1. Realized that the icons were colored white so changing the 
 #2. background color allowed me to see them!
@@ -14,7 +14,7 @@
 </p>
 
 
-<h2>Technical Challenges</h2>:
+<h2>Technical Challenges</h2>
 <p>
 1. Struggled with getting svg icons to show - solved #1
 2. I couldn't get my backgroudn image to show - SOLVED #2
