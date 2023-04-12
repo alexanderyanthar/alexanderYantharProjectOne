@@ -396,14 +396,12 @@ header .contactContainer {
 .featuredSales .viewAll {
   text-align: center;
 }
-.featuredSales .featuredContainer {
-  padding: 2rem 0;
-}
-.featuredSales .featuredContainer .mainContainer {
+.featuredSales .mainContainer {
   display: flex;
   flex-wrap: wrap;
+  padding: 2rem 0;
 }
-.featuredSales .featuredContainer .mainContainer .mainContainerItems {
+.featuredSales .mainContainer .mainContainerItems {
   border: 1px solid #666;
   display: flex;
   flex-direction: column;
@@ -414,43 +412,43 @@ header .contactContainer {
   text-align: left;
   padding: 0.5rem;
 }
-.featuredSales .featuredContainer .mainContainer .mainContainerItems .individualItem {
+.featuredSales .mainContainer .mainContainerItems .individualItem {
   display: flex;
   flex-direction: column;
 }
-.featuredSales .featuredContainer .mainContainer .mainContainerItems .individualItem .hidden {
+.featuredSales .mainContainer .mainContainerItems .individualItem .hidden {
   visibility: hidden;
 }
-.featuredSales .featuredContainer .mainContainer .mainContainerItems .individualItem .sale,
-.featuredSales .featuredContainer .mainContainer .mainContainerItems .individualItem .new {
+.featuredSales .mainContainer .mainContainerItems .individualItem .sale,
+.featuredSales .mainContainer .mainContainerItems .individualItem .new {
   color: #fff;
   width: 25%;
   text-align: center;
   position: relative;
   left: -0.5rem;
 }
-.featuredSales .featuredContainer .mainContainer .mainContainerItems .individualItem .sale {
+.featuredSales .mainContainer .mainContainerItems .individualItem .sale {
   background-color: #eba0aa;
 }
-.featuredSales .featuredContainer .mainContainer .mainContainerItems .individualItem .new {
+.featuredSales .mainContainer .mainContainerItems .individualItem .new {
   background-color: #88cce2;
 }
-.featuredSales .featuredContainer .mainContainer .mainContainerItems .individualItem span {
+.featuredSales .mainContainer .mainContainerItems .individualItem span {
   text-decoration-line: line-through;
 }
-.featuredSales .featuredContainer .mainContainer .mainContainerItems .itemTextContainer {
+.featuredSales .mainContainer .mainContainerItems .itemTextContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.featuredSales .featuredContainer .mainContainer .mainContainerItems .itemTextContainer .iconContainer {
+.featuredSales .mainContainer .mainContainerItems .itemTextContainer .iconContainer {
   border: 1px solid #666;
   padding: 0.1rem;
 }
-.featuredSales .featuredContainer .mainContainer .mainContainerItems .itemTextContainer .textContainer {
+.featuredSales .mainContainer .mainContainerItems .itemTextContainer .textContainer {
   line-height: 1.2rem;
 }
-.featuredSales .featuredContainer .mainContainer .mainContainerItems .itemTextContainer .textContainer .price {
+.featuredSales .mainContainer .mainContainerItems .itemTextContainer .textContainer .price {
   font-size: 0.75rem;
   font-weight: 400;
   color: #666;
@@ -897,19 +895,19 @@ footer .wrapper .form form fieldset [type=email] {
   .featuredSales {
     width: 100%;
   }
-  .featuredSales .featuredContainer .mainContainer {
+  .featuredSales .mainContainer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .featuredSales .featuredContainer .mainContainer .mainContainerItems {
+  .featuredSales .mainContainer .mainContainerItems {
     width: calc(80% - 2rem);
   }
-  .featuredSales .featuredContainer .mainContainer .mainContainerItems:nth-of-type(6),
-  .featuredSales .featuredContainer .mainContainer .mainContainerItems:nth-of-type(7),
-  .featuredSales .featuredContainer .mainContainer .mainContainerItems:nth-of-type(8),
-  .featuredSales .featuredContainer .mainContainer .mainContainerItems:nth-of-type(9),
-  .featuredSales .featuredContainer .mainContainer .mainContainerItems:nth-of-type(10) {
+  .featuredSales .mainContainer .mainContainerItems:nth-of-type(6),
+  .featuredSales .mainContainer .mainContainerItems:nth-of-type(7),
+  .featuredSales .mainContainer .mainContainerItems:nth-of-type(8),
+  .featuredSales .mainContainer .mainContainerItems:nth-of-type(9),
+  .featuredSales .mainContainer .mainContainerItems:nth-of-type(10) {
     display: none;
   }
   .majorSales .wrapper {
