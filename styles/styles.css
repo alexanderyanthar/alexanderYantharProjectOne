@@ -253,6 +253,9 @@ button {
   background-color: #fff;
   padding: 1rem 2rem;
 }
+button:hover, button:focus {
+  cursor: pointer;
+}
 
 fieldset {
   border: none;
@@ -296,6 +299,31 @@ ul {
   margin: 0 auto;
   max-width: 1200px;
   width: 90%;
+}
+
+.hoverUnderlineAnimation {
+  display: inline-block;
+  position: relative;
+  color: #333;
+}
+
+.hoverUnderlineAnimation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #333;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hoverUnderlineAnimation:hover::after,
+.hoverUnderlineAnimation:focus::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 header .navBar {
@@ -388,6 +416,7 @@ header .contactContainer {
   margin: 0 auto;
 }
 .featuredSales h2 {
+  width: 100%;
   text-align: center;
   font-size: 2rem;
   font-weight: 500;
