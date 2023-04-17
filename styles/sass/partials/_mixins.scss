@@ -10,8 +10,7 @@
 }
 
 // Flex
-@mixin flexStyling ($direction, $justifyStyle, $alignStyle) {
-    flex-direction: $direction;
+@mixin flexStyling ($justifyStyle, $alignStyle) {
     justify-content: $justifyStyle;
     align-items: $alignStyle;
 }

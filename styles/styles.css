@@ -656,8 +656,6 @@ footer .wrapper .form form fieldset [type=email] {
 }
 
 .contactForm .wrapper fieldset {
-  display: flex;
-  flex-direction: column;
   justify-content: space-around;
   padding: 2rem 0;
   height: auto;
