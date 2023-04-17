@@ -284,9 +284,8 @@
         width: 100%;
 
         .mainContainer {
+            @include flexStyling(center, center);
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
 
             .mainContainerItems {
                 width: calc(80% - 2rem);

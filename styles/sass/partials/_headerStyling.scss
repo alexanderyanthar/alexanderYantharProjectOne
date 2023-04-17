@@ -4,8 +4,7 @@
 
 header {
     .navBar {
-        justify-content: space-between;
-        align-items: center;
+        @include flexStyling(space-between, center);
         padding: 1.5rem 2rem;
 
         .hamburgerMenu {
@@ -57,16 +56,12 @@ header {
 
     .indexContainer {
         background-image: url(../assets/home.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        @include backgroundImg();
     }
 
     .contactContainer {
         background-image: url(../assets/contact-us.jpg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+        @include backgroundImg();
         height: 30vh;
     }
 }

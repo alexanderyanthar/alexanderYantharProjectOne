@@ -9,8 +9,7 @@
 .catalogueContainer {
 
     .wrapper {
-        justify-content: space-between;
-        align-items: center;
+        @include flexStyling(space-between, center);
         padding: 1rem 0;
     }
 
@@ -56,8 +55,7 @@
 
         .mainContainerItems {
             @include borderStyle();
-            justify-content: center;
-            align-items: center;
+            @include flexStyling(center, center);
             margin: 1rem;
             width: calc(20% - 2rem);
             text-align: left;
@@ -94,9 +92,7 @@
             }
 
             .itemTextContainer {
-                align-items: center;
-                justify-content: space-between;
-
+                @include flexStyling(space-between, center);
 
 
             .iconContainer {
@@ -125,17 +121,14 @@
     .saleContainer1,
     .saleContainer2 {
         height: 100vh;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
+        @include backgroundImg();
     }
 
     .saleContainer1 {
+        @include flexStyling(flex-end, center);
         width: 33%;
         background-image: url(../assets/vert1.jpg);
         margin-right: 1.5rem;
-        justify-content: flex-end;
-        align-items: center;
         text-align: center;
 
         .textContainer {

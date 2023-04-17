@@ -22,6 +22,13 @@
     display: $imgDisplay;
 }
 
+// Background image
+@mixin backgroundImg ($backImgPos: center, $backImgSize: cover, $backImgRepeat: no-repeat) {
+    background-position: $backImgPos;
+    background-size: $backImgSize;
+    background-repeat: $backImgRepeat;
+}
+
 // wrapper
 @mixin wrapperStyle($wrapperMargin: 0 auto, $wrapperMaxWidth: 1200px, $wrapperWidth: 90%) {
     margin: $wrapperMargin;

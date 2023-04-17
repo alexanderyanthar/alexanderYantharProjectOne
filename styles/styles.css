@@ -380,8 +380,8 @@ header .headerContainer .wrapper p {
 header .indexContainer {
   background-image: url(../assets/home.jpg);
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 header .contactContainer {
   background-image: url(../assets/contact-us.jpg);
@@ -463,8 +463,8 @@ header .contactContainer {
   text-decoration-line: line-through;
 }
 .featuredSales .mainContainer .mainContainerItems .itemTextContainer {
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 .featuredSales .mainContainer .mainContainerItems .itemTextContainer .iconContainer {
   border: 1px solid #666;
@@ -487,16 +487,16 @@ header .contactContainer {
 .majorSales .wrapper .saleContainer1,
 .majorSales .wrapper .saleContainer2 {
   height: 100vh;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
 }
 .majorSales .wrapper .saleContainer1 {
+  justify-content: flex-end;
+  align-items: center;
   width: 33%;
   background-image: url(../assets/vert1.jpg);
   margin-right: 1.5rem;
-  justify-content: flex-end;
-  align-items: center;
   text-align: center;
 }
 .majorSales .wrapper .saleContainer1 .textContainer {
@@ -577,8 +577,8 @@ footer {
   background-color: #333;
 }
 footer .wrapper {
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   height: 60vh;
 }
 footer .wrapper h3 {
@@ -606,9 +606,8 @@ footer .wrapper .logoIcons p {
   padding: 1.5rem 0;
 }
 footer .wrapper .logoIcons ul {
-  display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   width: 50%;
 }
 footer .wrapper .logoIcons ul li {
@@ -874,9 +873,9 @@ footer .wrapper .form form fieldset [type=email] {
     width: 100%;
   }
   .featuredSales .mainContainer {
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
   }
   .featuredSales .mainContainer .mainContainerItems {
     width: calc(80% - 2rem);
