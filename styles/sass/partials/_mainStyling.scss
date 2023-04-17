@@ -9,7 +9,6 @@
 .catalogueContainer {
 
     .wrapper {
-        display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 1rem 0;
@@ -52,14 +51,11 @@
     }
 
     .mainContainer {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 2rem 0;
+        flex-wrap: wrap;
+        padding: 2rem 0;
 
         .mainContainerItems {
             @include borderStyle();
-            display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             margin: 1rem;
@@ -69,8 +65,6 @@
             
 
             .individualItem {
-                display: flex;
-                flex-direction: column;
 
                 .hidden {
                     visibility: hidden;
@@ -100,7 +94,6 @@
             }
 
             .itemTextContainer {
-                display: flex;
                 align-items: center;
                 justify-content: space-between;
 
@@ -125,7 +118,6 @@
 
 // Section 3 - Sales
 .majorSales .wrapper {
-    display: flex;
     align-items: center;
     padding: 5rem 0;
     margin-top: 2rem;
@@ -142,8 +134,6 @@
         width: 33%;
         background-image: url(../assets/vert1.jpg);
         margin-right: 1.5rem;
-        display: flex;
-        flex-direction: column;
         justify-content: flex-end;
         align-items: center;
         text-align: center;
@@ -213,7 +203,6 @@
     }
 
     .gallery {
-        display: flex;
         margin: 3rem 0;
 
         li {

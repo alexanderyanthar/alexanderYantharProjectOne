@@ -1,5 +1,7 @@
+// importing variable partial
 @use "./variables" as *;
 
+// general styling
 // fonts
 @mixin fontStyle($sizeValue: 125%, $weightValue: $medium, $colorValue: $darkGrey) {
     font-size: $sizeValue;
@@ -7,8 +9,13 @@
     color: $colorValue;
 }
 
+// Flex
+@mixin flexStyling ($direction, $justifyStyle, $alignStyle) {
+    flex-direction: $direction;
+    justify-content: $justifyStyle;
+    align-items: $alignStyle;
+}
 
-// general styling
 // images
 @mixin imgSize($imgHeight: auto, $imgMaxWidth: 100%, $imgDisplay: block) {
     height: $imgHeight;
@@ -24,6 +31,7 @@
 }
 
 // border for featured sales, view all button, and checkout icon
+// **NOT SURE IF I NEED THIS
 @mixin borderStyle($borderSize: 1px, $borderType: solid, $borderColor: $lightGrey) {
     border: $borderSize $borderType $borderColor;
 }

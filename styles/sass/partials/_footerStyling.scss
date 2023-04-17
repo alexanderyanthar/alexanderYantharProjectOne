@@ -7,7 +7,6 @@ footer {
     background-color: $darkGrey;
 
     .wrapper {
-        display: flex;
         align-items: center;
         justify-content: space-between;
         height: 60vh;
@@ -26,6 +25,12 @@ footer {
         // logoIcons, contact, profile, forms can be one
         // contact and profile are excatly ethe same styling so they can all have one class
 
+        .footerStyling {
+            width: 25%;
+            height: 50%;
+            justify-content: space-between;
+        }
+        
         .logoIcons,
         .contact,
         .userProfile {
@@ -33,11 +38,6 @@ footer {
         }
 
         .logoIcons {
-            width: 25%;
-            height: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
 
             .logo {
                 width: 50%;
@@ -64,53 +64,15 @@ footer {
         }
 
         // contact 
-        .contact {
-            width: 25%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 50%;
-
-            h3 {
-                margin-bottom: 1rem;
-            }
-
-            ul {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-
-                li {
-                    margin-bottom: 1rem;
-                }
-
-                li:last-child {
-                    margin-bottom: 0;
-                }
-
-                li img {
-                    width: 1rem;
-                    display: inline-block;
-                    margin-right: 0.25rem;
-                }
-            }
-        }
-
         // user profile
+        .contact,
         .userProfile {
-            width: 25%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 50%;
 
             h3 {
                 margin-bottom: 1rem;
             }
 
             ul {
-                display: flex;
-                flex-direction: column;
                 justify-content: space-between;
 
                 li {
@@ -131,14 +93,8 @@ footer {
 
         // newsletter form
         .form {
-            width: 25%;
-            height: 50%;
-            display: flex;
-            justify-content: space-between;
 
             form{
-                display: flex;
-                flex-direction: column;
                 justify-content: space-between;
 
                 p {
