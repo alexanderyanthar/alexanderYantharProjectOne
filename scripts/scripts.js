@@ -5,6 +5,15 @@ let lastScrollY = window.scrollY;
 
 // Function to hide or show navbar on scroll
 
+/* resources
+To make the navbar hide whenever the user scrolls:
+https://www.youtube.com/watch?v=Q_XZk5Vnujw&ab_channel=dcode
+
+To build a functional hamburger menu/responsive navbar:
+https://www.youtube.com/watch?v=At4B7A4GOPg&t=2s&ab_channel=WebDevSimplified
+*/
+
+
 // Functions to close hamburger menu
 const showMenu = () => {
     hamburger.classList.toggle('active');
