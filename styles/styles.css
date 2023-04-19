@@ -738,14 +738,31 @@ footer .wrapper .form form fieldset [type=email] {
   }
 }
 @media (max-width: 768px) {
+  header .navBar {
+    z-index: 2;
+  }
   header .navBar .hamburgerMenu {
     display: block;
   }
   header .navBar .checkout {
     display: none;
   }
-  header .navBar nav {
-    display: none;
+  header .navBar .navMenu {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    top: 8vh;
+    left: -100%;
+    flex-direction: column;
+    background-color: #fff;
+    text-align: center;
+    transition: 0.3s ease;
+  }
+  header .navBar .navItem {
+    margin: 1rem 0 1rem 2rem;
+  }
+  header .navBar .navMenu.active {
+    left: 0;
   }
   header .headerContainer {
     height: 55vh;
@@ -881,15 +898,6 @@ footer .wrapper .form form fieldset [type=email] {
   }
 }
 @media (max-width: 450px) {
-  header .navBar .hamburgerMenu {
-    display: block;
-  }
-  header .navBar img {
-    display: none;
-  }
-  header .navBar nav {
-    display: none;
-  }
   header .headerContainer {
     height: 60vh;
   }

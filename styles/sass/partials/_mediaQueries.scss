@@ -32,6 +32,7 @@
     // Header styling
     header {
         .navBar {
+            z-index: 2;
             .hamburgerMenu {
                 display: block;
             }
@@ -40,8 +41,25 @@
                 display: none;
             }
 
-            nav {
-                display: none;
+
+            .navMenu {
+                display: flex;
+                width: 100%;
+                position: fixed;
+                top: 8vh;
+                left: -100%;
+                flex-direction: column;
+                background-color: $white;
+                text-align: center;
+                transition: 0.3s ease;
+            }
+
+            .navItem {
+                margin: 1rem 0 1rem 2rem;
+            }
+
+            .navMenu.active {
+                left: 0;
             }
         }
         .headerContainer {
@@ -220,20 +238,6 @@
 @media (max-width: $phone) {
     // header section
     header {
-        .navBar {
-            .hamburgerMenu {
-                    display: block;
-                }
-
-            img {
-                display: none;
-            }
-
-            nav {
-                display: none;
-            }
-        }
-
         .headerContainer {
             height: 60vh;
             .wrapper {
