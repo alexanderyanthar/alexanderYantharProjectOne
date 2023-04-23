@@ -5,12 +5,13 @@
 // footer styling
 footer {
     background-color: $darkGrey;
+    padding: 2rem;
 
     .wrapper {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: 60vh;
+        height: 30vh;
 
         h3 {
             font-size: 1.25rem;
@@ -20,6 +21,10 @@ footer {
         p,
         a {
             color: $white;
+        }
+
+        .row1 {
+            height: 20%;
         }
 
         // refractor and condense contianer code into one styling unit
@@ -34,7 +39,7 @@ footer {
 
         .logoIcons {
             width: 25%;
-            height: 50%;
+            height: 80%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -67,7 +72,7 @@ footer {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            height: 50%;
+            height: 80%;
 
             h3 {
                 margin-bottom: 1rem;
@@ -101,7 +106,7 @@ footer {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            height: 50%;
+            height: 80%;
 
             h3 {
                 margin-bottom: 1rem;
@@ -129,7 +134,7 @@ footer {
         // newsletter form
         .form {
             width: 25%;
-            height: 50%;
+            height: 80%;
             display: flex;
             justify-content: space-between;
 
