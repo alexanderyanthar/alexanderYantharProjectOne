@@ -4,9 +4,7 @@
 
 header {
     .navBar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flexStyling(space-between, center);
         padding: 1.5rem 2rem;
 
         .hamburgerMenu {
@@ -21,7 +19,6 @@ header {
         // use this: https: //www.30secondsofcode.org/css/s/hover-underline-animation/
         nav {
             ul {
-                display: flex;
                 justify-content: center;
 
                 a {
@@ -41,8 +38,6 @@ header {
         height: 100vh;
 
         .wrapper {
-            display: flex;
-            flex-direction: column;
             justify-content: center;
             height: 100%;
             padding-right: 50%;
@@ -61,16 +56,12 @@ header {
 
     .indexContainer {
         background-image: url(../assets/home.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        @include backgroundImg();
     }
 
     .contactContainer {
         background-image: url(../assets/contact-us.jpg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+        @include backgroundImg();
         height: 30vh;
     }
 }

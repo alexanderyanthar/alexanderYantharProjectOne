@@ -272,6 +272,15 @@ fieldset textarea {
   color: #666;
 }
 
+.flexRow,
+.flexColumn {
+  display: flex;
+}
+
+.flexColumn {
+  flex-direction: column;
+}
+
 img {
   height: auto;
   max-width: 100%;
@@ -327,7 +336,6 @@ ul {
 }
 
 header .navBar {
-  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 2rem;
@@ -340,7 +348,6 @@ header .navBar img {
      object-fit: contain;
 }
 header .navBar nav ul {
-  display: flex;
   justify-content: center;
 }
 header .navBar nav ul a {
@@ -355,8 +362,6 @@ header .headerContainer {
   height: 100vh;
 }
 header .headerContainer .wrapper {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   height: 100%;
   padding-right: 50%;
@@ -375,8 +380,8 @@ header .headerContainer .wrapper p {
 header .indexContainer {
   background-image: url(../assets/home.jpg);
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 header .contactContainer {
   background-image: url(../assets/contact-us.jpg);
@@ -387,7 +392,6 @@ header .contactContainer {
 }
 
 .catalogueContainer .wrapper {
-  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
@@ -426,24 +430,17 @@ header .contactContainer {
   text-align: center;
 }
 .featuredSales .mainContainer {
-  display: flex;
   flex-wrap: wrap;
   padding: 2rem 0;
 }
 .featuredSales .mainContainer .mainContainerItems {
   border: 1px solid #666;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 1rem;
   width: calc(20% - 2rem);
   text-align: left;
   padding: 0.5rem;
-}
-.featuredSales .mainContainer .mainContainerItems .individualItem {
-  display: flex;
-  flex-direction: column;
 }
 .featuredSales .mainContainer .mainContainerItems .individualItem .hidden {
   visibility: hidden;
@@ -466,9 +463,8 @@ header .contactContainer {
   text-decoration-line: line-through;
 }
 .featuredSales .mainContainer .mainContainerItems .itemTextContainer {
-  display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 .featuredSales .mainContainer .mainContainerItems .itemTextContainer .iconContainer {
   border: 1px solid #666;
@@ -484,7 +480,6 @@ header .contactContainer {
 }
 
 .majorSales .wrapper {
-  display: flex;
   align-items: center;
   padding: 5rem 0;
   margin-top: 2rem;
@@ -492,18 +487,16 @@ header .contactContainer {
 .majorSales .wrapper .saleContainer1,
 .majorSales .wrapper .saleContainer2 {
   height: 100vh;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
 }
 .majorSales .wrapper .saleContainer1 {
+  justify-content: flex-end;
+  align-items: center;
   width: 33%;
   background-image: url(../assets/vert1.jpg);
   margin-right: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
   text-align: center;
 }
 .majorSales .wrapper .saleContainer1 .textContainer {
@@ -571,7 +564,6 @@ header .contactContainer {
   color: #666;
 }
 .followInstagram .wrapper .gallery {
-  display: flex;
   margin: 3rem 0;
 }
 .followInstagram .wrapper .gallery li {
@@ -623,9 +615,8 @@ footer .wrapper .logoIcons p {
   padding: 1.5rem 0;
 }
 footer .wrapper .logoIcons ul {
-  display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   width: 50%;
 }
 footer .wrapper .logoIcons ul li {
@@ -660,6 +651,7 @@ footer .wrapper .contact ul li img {
   display: inline-block;
   margin-right: 0.25rem;
 }
+footer .wrapper .contact,
 footer .wrapper .userProfile {
   width: 25%;
   display: flex;
@@ -667,20 +659,23 @@ footer .wrapper .userProfile {
   justify-content: space-between;
   height: 80%;
 }
+footer .wrapper .contact h3,
 footer .wrapper .userProfile h3 {
   margin-bottom: 1rem;
 }
+footer .wrapper .contact ul,
 footer .wrapper .userProfile ul {
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
 }
+footer .wrapper .contact ul li,
 footer .wrapper .userProfile ul li {
   margin-bottom: 1rem;
 }
+footer .wrapper .contact ul li:last-child,
 footer .wrapper .userProfile ul li:last-child {
   margin-bottom: 0;
 }
+footer .wrapper .contact ul li img,
 footer .wrapper .userProfile ul li img {
   width: 1rem;
   display: inline-block;
@@ -715,8 +710,6 @@ footer .wrapper .form form fieldset [type=email] {
 }
 
 .contactForm .wrapper fieldset {
-  display: flex;
-  flex-direction: column;
   justify-content: space-around;
   padding: 2rem 0;
   height: auto;
@@ -935,9 +928,9 @@ footer .wrapper .form form fieldset [type=email] {
     width: 100%;
   }
   .featuredSales .mainContainer {
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
   }
   .featuredSales .mainContainer .mainContainerItems {
     width: calc(80% - 2rem);

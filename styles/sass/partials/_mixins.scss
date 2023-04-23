@@ -1,5 +1,7 @@
+// importing variable partial
 @use "./variables" as *;
 
+// general styling
 // fonts
 @mixin fontStyle($sizeValue: 125%, $weightValue: $medium, $colorValue: $darkGrey) {
     font-size: $sizeValue;
@@ -7,13 +9,24 @@
     color: $colorValue;
 }
 
+// Flex
+@mixin flexStyling ($justifyStyle, $alignStyle) {
+    justify-content: $justifyStyle;
+    align-items: $alignStyle;
+}
 
-// general styling
 // images
 @mixin imgSize($imgHeight: auto, $imgMaxWidth: 100%, $imgDisplay: block) {
     height: $imgHeight;
     max-width: $imgMaxWidth;
     display: $imgDisplay;
+}
+
+// Background image
+@mixin backgroundImg ($backImgPos: center, $backImgSize: cover, $backImgRepeat: no-repeat) {
+    background-position: $backImgPos;
+    background-size: $backImgSize;
+    background-repeat: $backImgRepeat;
 }
 
 // wrapper
@@ -24,6 +37,7 @@
 }
 
 // border for featured sales, view all button, and checkout icon
+// **NOT SURE IF I NEED THIS
 @mixin borderStyle($borderSize: 1px, $borderType: solid, $borderColor: $lightGrey) {
     border: $borderSize $borderType $borderColor;
 }

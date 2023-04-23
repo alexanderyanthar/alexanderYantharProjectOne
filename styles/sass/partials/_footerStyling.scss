@@ -54,9 +54,7 @@ footer {
             }
 
             ul {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
+                @include flexStyling(space-between, center);
                 width: 50%;
             }
 
@@ -103,6 +101,7 @@ footer {
         }
 
         // user profile
+        .contact,
         .userProfile {
             width: 25%;
             display: flex;
@@ -115,8 +114,6 @@ footer {
             }
 
             ul {
-                display: flex;
-                flex-direction: column;
                 justify-content: space-between;
 
                 li {

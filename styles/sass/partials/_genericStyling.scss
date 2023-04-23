@@ -44,6 +44,15 @@ fieldset textarea {
     @include fontStyle(1rem, $regular, $lightGrey)
 }
 
+.flexRow,
+.flexColumn {
+    display: flex;
+}
+
+.flexColumn {
+    flex-direction: column
+}
+
 img {
    @include imgSize();
 }
