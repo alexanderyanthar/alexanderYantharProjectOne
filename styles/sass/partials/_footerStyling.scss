@@ -10,8 +10,7 @@ footer {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 4rem 0;
-        height: 40vh;
+        height: 60vh;
 
         h3 {
             font-size: 1.25rem;
@@ -21,10 +20,6 @@ footer {
         p,
         a {
             color: $white;
-        }
-
-        .row1 {
-            height: 20%;
         }
 
         // refractor and condense contianer code into one styling unit
@@ -38,15 +33,14 @@ footer {
         }
 
         .logoIcons {
-            width: 24%;
-            height: 80%;
+            width: 25%;
+            height: 50%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
 
             .logo {
                 width: 50%;
-                object-fit: contain;
             }
 
             p {
@@ -73,7 +67,7 @@ footer {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            height: 80%;
+            height: 50%;
 
             h3 {
                 margin-bottom: 1rem;
@@ -107,7 +101,7 @@ footer {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            height: 80%;
+            height: 50%;
 
             h3 {
                 margin-bottom: 1rem;
@@ -135,14 +129,13 @@ footer {
         // newsletter form
         .form {
             width: 25%;
-            height: 80%;
+            height: 50%;
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
 
             form{
                 display: flex;
                 flex-direction: column;
-                height: 100%;
                 justify-content: space-between;
 
                 p {
@@ -152,9 +145,6 @@ footer {
                 fieldset {
                     border: none;
                     padding: 0;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
                 }
 
                 fieldset [type=email] {

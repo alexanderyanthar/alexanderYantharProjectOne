@@ -580,8 +580,7 @@ footer .wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 4rem 0;
-  height: 40vh;
+  height: 60vh;
 }
 footer .wrapper h3 {
   font-size: 1.25rem;
@@ -591,25 +590,20 @@ footer .wrapper p,
 footer .wrapper a {
   color: #fff;
 }
-footer .wrapper .row1 {
-  height: 20%;
-}
 footer .wrapper .logoIcons,
 footer .wrapper .contact,
 footer .wrapper .userProfile {
   margin-right: 1rem;
 }
 footer .wrapper .logoIcons {
-  width: 24%;
-  height: 80%;
+  width: 25%;
+  height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 footer .wrapper .logoIcons .logo {
   width: 50%;
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 footer .wrapper .logoIcons p {
   padding: 1.5rem 0;
@@ -630,7 +624,7 @@ footer .wrapper .contact {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 80%;
+  height: 50%;
 }
 footer .wrapper .contact h3 {
   margin-bottom: 1rem;
@@ -657,7 +651,7 @@ footer .wrapper .userProfile {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 80%;
+  height: 50%;
 }
 footer .wrapper .contact h3,
 footer .wrapper .userProfile h3 {
@@ -683,14 +677,13 @@ footer .wrapper .userProfile ul li img {
 }
 footer .wrapper .form {
   width: 25%;
-  height: 80%;
+  height: 50%;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
 }
 footer .wrapper .form form {
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: space-between;
 }
 footer .wrapper .form form p {
@@ -699,9 +692,6 @@ footer .wrapper .form form p {
 footer .wrapper .form form fieldset {
   border: none;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 footer .wrapper .form form fieldset [type=email] {
   background-color: #333;
@@ -727,13 +717,13 @@ footer .wrapper .form form fieldset [type=email] {
 }
 
 @media (max-width: 1479px) {
-  .featuredSales .mainContainer .mainContainerItems .individualItem .sale,
-  .featuredSales .mainContainer .mainContainerItems .individualItem .new {
+  .featuredSales .featuredContainer .mainContainer .mainContainerItems .individualItem .sale,
+  .featuredSales .featuredContainer .mainContainer .mainContainerItems .individualItem .new {
     width: 50%;
   }
 }
-@media (max-width: 1200px) {
-  .featuredSales .mainContainer .mainContainerItems {
+@media (max-width: 1080px) {
+  .featuredSales .featuredContainer .mainContainer .mainContainerItems {
     width: calc(33% - 2rem);
   }
   .followInstagram .wrapper .gallery li:nth-of-type(2) {
@@ -972,9 +962,6 @@ footer .wrapper .form form fieldset [type=email] {
   }
   .contactForm .wrapper fieldset button {
     width: 50%;
-  }
-  footer .wrapper {
-    padding: 0.5rem 0;
   }
   footer .wrapper .contact,
   footer .wrapper .userProfile {

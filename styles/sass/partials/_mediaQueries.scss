@@ -7,8 +7,8 @@
 @media (max-width: $largeLaptop) {
     // need to find a way to reduce the size
     // main section 2 -features sales
-    .featuredSales .mainContainer .mainContainerItems .individualItem .sale,
-    .featuredSales .mainContainer .mainContainerItems .individualItem .new {
+    .featuredSales .featuredContainer .mainContainer .mainContainerItems .individualItem .sale,
+    .featuredSales .featuredContainer .mainContainer .mainContainerItems .individualItem .new {
         width: 50%;
     }
 }
@@ -16,7 +16,7 @@
 // laptop
 @media (max-width: $laptop) {
     // main section 2 - featured sales
-        .featuredSales .mainContainer .mainContainerItems {
+        .featuredSales .featuredContainer .mainContainer .mainContainerItems {
             width: calc(33% - 2rem);
         }
 
@@ -25,10 +25,6 @@
         li:nth-of-type(2) {
             display: none;
         }
-    }
-
-    footer .wrapper {
-
     }
 }
 
@@ -352,7 +348,6 @@
 
     // footer
     footer .wrapper {
-        padding: 0.5rem 0;
         .contact,
         .userProfile {
             width: 100%;
