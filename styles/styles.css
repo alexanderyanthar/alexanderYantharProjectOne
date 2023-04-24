@@ -716,13 +716,13 @@ footer .wrapper .form form fieldset [type=email] {
 }
 
 @media (max-width: 1479px) {
-  .featuredSales .featuredContainer .mainContainer .mainContainerItems .individualItem .sale,
-  .featuredSales .featuredContainer .mainContainer .mainContainerItems .individualItem .new {
+  .featuredSales .mainContainer .mainContainerItems .individualItem .sale,
+  .featuredSales .mainContainer .mainContainerItems .individualItem .new {
     width: 50%;
   }
 }
 @media (max-width: 1080px) {
-  .featuredSales .featuredContainer .mainContainer .mainContainerItems {
+  .featuredSales .mainContainer .mainContainerItems {
     width: calc(33% - 2rem);
   }
   .followInstagram .wrapper .gallery li:nth-of-type(2) {
@@ -776,13 +776,13 @@ footer .wrapper .form form fieldset [type=email] {
   .featuredSales h2 {
     padding: 2rem 0;
   }
-  .featuredSales .featuredContainer .mainContainer .mainContainerItems {
+  .featuredSales .mainContainer .mainContainerItems {
     width: calc(50% - 2rem);
   }
-  .featuredSales .featuredContainer .mainContainer .mainContainerItems:nth-of-type(6),
-  .featuredSales .featuredContainer .mainContainer .mainContainerItems:nth-of-type(7),
-  .featuredSales .featuredContainer .mainContainer .mainContainerItems:nth-of-type(8),
-  .featuredSales .featuredContainer .mainContainer .mainContainerItems:nth-of-type(9) {
+  .featuredSales .mainContainer .mainContainerItems:nth-of-type(6),
+  .featuredSales .mainContainer .mainContainerItems:nth-of-type(7),
+  .featuredSales .mainContainer .mainContainerItems:nth-of-type(8),
+  .featuredSales .mainContainer .mainContainerItems:nth-of-type(9) {
     display: none;
   }
   .majorSales .wrapper {
