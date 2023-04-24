@@ -740,7 +740,7 @@ footer .wrapper .form form fieldset [type=email] {
     display: none;
   }
   header .headerContainer {
-    height: 55vh;
+    height: 90vh;
   }
   header .headerContainer .wrapper {
     margin: 0 auto;
@@ -769,9 +769,6 @@ footer .wrapper .form form fieldset [type=email] {
     font-weight: 500;
     color: #333;
     padding: 0.5rem 1rem;
-  }
-  .catalogueContainer .imgContainer1 {
-    margin-top: 3rem;
   }
   .catalogueContainer .imgContainer3 {
     margin-top: 0;
@@ -830,6 +827,9 @@ footer .wrapper .form form fieldset [type=email] {
   .followInstagram .wrapper .gallery li:nth-of-type(3) {
     display: none;
   }
+  footer {
+    padding: 1rem 0;
+  }
   footer .wrapper {
     height: auto;
     flex-wrap: wrap;
@@ -847,6 +847,11 @@ footer .wrapper .form form fieldset [type=email] {
     border-bottom: 1px solid #fff;
     text-align: center;
   }
+  footer .wrapper .logoIcons .flexRow {
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+  }
   footer .wrapper .logoIcons .logo {
     width: 25%;
   }
@@ -860,6 +865,9 @@ footer .wrapper .form form fieldset [type=email] {
   }
   footer .wrapper .form form {
     width: 100%;
+  }
+  footer .wrapper .form form p {
+    margin-top: 1rem;
   }
   footer .wrapper .form form input[type=email] {
     margin-top: 1rem;
@@ -883,7 +891,7 @@ footer .wrapper .form form fieldset [type=email] {
     display: none;
   }
   header .headerContainer {
-    height: 60vh;
+    height: 90vh;
   }
   header .headerContainer .wrapper {
     margin: 0 auto;
@@ -905,6 +913,7 @@ footer .wrapper .form form fieldset [type=email] {
     margin: 0 auto;
     padding: 0;
     flex-direction: column;
+    padding-top: 2rem;
   }
   .catalogueContainer .imgContainer {
     width: 100%;
@@ -961,6 +970,11 @@ footer .wrapper .form form fieldset [type=email] {
   }
   .contactForm .wrapper fieldset button {
     width: 50%;
+  }
+  footer .wrapper .logoIcons .flexRow {
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
   }
   footer .wrapper .contact,
   footer .wrapper .userProfile {

@@ -45,7 +45,7 @@
             }
         }
         .headerContainer {
-            height: 55vh;
+            height: 90vh;
 
             .wrapper {
                 margin: 0 auto;
@@ -82,9 +82,6 @@
             }
         }
 
-        .imgContainer1 {
-            margin-top: 3rem;
-        }
 
         .imgContainer3 {
             margin-top: 0;
@@ -166,55 +163,68 @@
     } 
 
     // footer
-    footer .wrapper {
-        height: auto;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin: 0 auto;
-
-        .logoIcons,
-        .form {
-            width: 100%;
-            align-items: center;
-            margin: 1rem 0;
-        }
-
-        .logoIcons {
-            padding-bottom: 1rem;
-            border-bottom: 1px solid $white;
-            text-align: center;
-
-            .logo {
-                width: 25%;
-            }
-
-            ul {
-                width: 50%;
-            }
-        }
-
-        .form {
-            padding-top: 1rem;
-            border-top: 1px solid $white;
-            text-align: center;
-
-            form {
+    footer {
+        padding: 1rem 0;
+        .wrapper {
+            height: auto;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 0 auto;
+    
+            .logoIcons,
+            .form {
                 width: 100%;
-
-                input[type=email] {
-                    margin-top: 1rem;
+                align-items: center;
+                margin: 1rem 0;
+            }
+    
+            .logoIcons {
+                padding-bottom: 1rem;
+                border-bottom: 1px solid $white;
+                text-align: center;
+    
+                .flexRow {
+                    width: 100%;
+                    @include flexStyling(space-around, center);
+                }
+    
+                .logo {
+                    width: 25%;
+                }
+    
+                ul {
+                    width: 50%;
                 }
             }
-        }
-
-        .contact,
-        .userProfile {
-            align-items: center;
-            margin: 1rem;
-            height: auto;
-            width: calc(45% - 2rem);
+    
+            .form {
+                padding-top: 1rem;
+                border-top: 1px solid $white;
+                text-align: center;
+    
+                form {
+                    width: 100%;
+    
+                    p {
+                        margin-top: 1rem;
+                    }
+    
+                    input[type=email] {
+                        margin-top: 1rem;
+                    }
+                }
+            }
+    
+            .contact,
+            .userProfile {
+                align-items: center;
+                margin: 1rem;
+                height: auto;
+                width: calc(45% - 2rem);
+            }
         }
     }
+    
 }
 
 @media (max-width: $phone) {
@@ -235,7 +245,7 @@
         }
 
         .headerContainer {
-            height: 60vh;
+            height: 90vh;
             .wrapper {
                 margin: 0 auto;
                 justify-content: flex-start;
@@ -267,6 +277,7 @@
             margin: 0 auto;
             padding: 0;
             flex-direction: column;
+            padding-top: 2rem;
         }
 
         .imgContainer {
@@ -348,6 +359,12 @@
 
     // footer
     footer .wrapper {
+
+        .logoIcons .flexRow {
+            width: 100%;
+            @include flexStyling(space-around, center);
+        }
+
         .contact,
         .userProfile {
             width: 100%;
