@@ -579,8 +579,8 @@ footer {
 }
 footer .wrapper {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   height: 30vh;
 }
 footer .wrapper h3 {
@@ -591,27 +591,36 @@ footer .wrapper p,
 footer .wrapper a {
   color: #fff;
 }
-footer .wrapper .row1 {
-  height: 20%;
+footer .wrapper .footerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 25%;
 }
 footer .wrapper .logoIcons,
 footer .wrapper .contact,
 footer .wrapper .userProfile {
   margin-right: 1rem;
 }
-footer .wrapper .logoIcons {
-  width: 25%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+footer .wrapper .row1 {
+  height: 20%;
+}
+footer .wrapper .row2 {
+  height: 80%;
 }
 footer .wrapper .logoIcons .logo {
   width: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 footer .wrapper .logoIcons p {
-  padding: 1.5rem 0;
-  padding-right: 1rem;
+  padding: 1rem 1rem 1.5rem 0;
+}
+footer .wrapper .logoIcons .row2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 footer .wrapper .logoIcons ul {
   justify-content: space-between;
@@ -623,13 +632,6 @@ footer .wrapper .logoIcons ul li {
 }
 footer .wrapper .logoIcons li:first-child {
   width: 0.7rem;
-}
-footer .wrapper .contact {
-  width: 25%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
 }
 footer .wrapper .contact h3 {
   margin-bottom: 1rem;
@@ -649,14 +651,6 @@ footer .wrapper .contact ul li img {
   width: 1rem;
   display: inline-block;
   margin-right: 0.25rem;
-}
-footer .wrapper .contact,
-footer .wrapper .userProfile {
-  width: 25%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
 }
 footer .wrapper .contact h3,
 footer .wrapper .userProfile h3 {
@@ -680,18 +674,18 @@ footer .wrapper .userProfile ul li img {
   display: inline-block;
   margin-right: 0.25rem;
 }
-footer .wrapper .form {
-  width: 25%;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-}
 footer .wrapper .form form {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-footer .wrapper .form form p {
+footer .wrapper .form form .row2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+footer .wrapper .form form .subscribe {
   margin-top: 1rem;
 }
 footer .wrapper .form form fieldset {

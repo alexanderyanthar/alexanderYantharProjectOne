@@ -69,34 +69,36 @@
 
     <!-- Footer section -->
     <footer>
-        <div class="wrapper">
+        <div class="wrapper flexRow">
             <!-- logo/icon section -->
-            <div class="footerStyling logoIcons flexColumn">
+            <div class="logoIcons footerContainer">
                 <img class="logo" src="./assets/logo-white.png" alt="Novas Boutique Shop logo">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, doloribus.</p>
-                <ul class="flexRow">
-                    <li>
-                        <!-- need to fix size of svg files -->
-                        <a href="#facebook">
-                            <img src="./assets/icons/facebook.svg" alt="link to Novas' facebook page">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#twitter">
-                            <img src="./assets/icons/twitter.svg" alt="Link to Nova's twitter">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#instagram">
-                            <img src="./assets/icons/instagram.svg" alt="Link to Novas' instagram page">
-                        </a>
-                    </li>
-                </ul>
+                <div class="row2">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, doloribus.</p>
+                    <ul class="flexRow">
+                        <li>
+                            <!-- need to fix size of svg files -->
+                            <a href="#facebook">
+                                <img src="./assets/icons/facebook.svg" alt="link to Novas' facebook page">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#twitter">
+                                <img src="./assets/icons/twitter.svg" alt="Link to Nova's twitter">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#instagram">
+                                <img src="./assets/icons/instagram.svg" alt="Link to Novas' instagram page">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <!-- Contact info -->
-            <div class="contact">
-                <h3>Contact</h3>
-                <ul class="flexColumn">
+            <div class="contact footerContainer">
+                <h3 class="row1">Contact</h3>
+                <ul class="flexColumn row2">
                     <li>
                         <a href="#address"><img src="./assets/icons/address.svg"
                                 alt="Link to show address to Novas' shop in google maps"> No 40 Baria Street</a>
@@ -115,9 +117,9 @@
                 </ul>
             </div>
             <!-- Profile section -->
-            <div class="footerStyling userProfile flexColumn">
-                <h3>Profile</h3>
-                <ul class="flexColumn">
+            <div class="userProfile footerContainer">
+                <h3 class="row1">Profile</h3>
+                <ul class="flexColumn row2">
                     <li>
                         <a href="#account"><img src="./assets/icons/user.svg" alt="Link to your account"> My Account</a>
                     </li>
@@ -135,15 +137,17 @@
                 </ul>
             </div>
             <!-- Newsletter form -->
-            <div class="footerStyling form flexRow">
+            <div class="form footerContainer">
                 <form class="flexColumn" action="#">
-                    <h3>Newsletter</h3>
-                    <p>Subscribe to our newsletter</p>
-                    <fieldset>
-                        <label for="email" class="sr-only">Your e-mail</label>
-                        <input type="email" placeholder="Your e-mail.." id="email" required>
-                    </fieldset>
-                    <p>@ 2023 Novas.</p>
+                    <h3 class="row1">Newsletter</h3>
+                    <div class="row2">
+                        <p class="subscribe">Subscribe to our newsletter</p>
+                        <fieldset>
+                            <label for="email" class="sr-only">Your e-mail</label>
+                            <input type="email" placeholder="Your e-mail.." id="email" required>
+                        </fieldset>
+                        <p>@ 2023 Novas.</p>
+                    </div>
                 </form>
             </div>
         
