@@ -434,7 +434,7 @@ header .contactContainer {
   padding: 2rem 0;
 }
 .featuredSales .mainContainer .mainContainerItems {
-  border: 1px solid #666;
+  border: 1px solid rgba(102, 102, 102, 0.3098039216);
   justify-content: center;
   align-items: center;
   margin: 1rem;
@@ -467,7 +467,7 @@ header .contactContainer {
   align-items: center;
 }
 .featuredSales .mainContainer .mainContainerItems .itemTextContainer .iconContainer {
-  border: 1px solid #666;
+  border: 1px solid rgba(102, 102, 102, 0.3098039216);
   padding: 0.1rem;
 }
 .featuredSales .mainContainer .mainContainerItems .itemTextContainer .textContainer {
@@ -990,6 +990,11 @@ footer .wrapper .form form fieldset [type=email] {
   }
 }
 @media (max-width: 350px) {
+  header .headerContainer .wrapper h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #333;
+  }
   .contactForm .wrapper fieldset button {
     width: 50%;
     padding: 1rem;

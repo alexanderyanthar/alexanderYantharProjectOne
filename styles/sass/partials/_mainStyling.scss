@@ -4,8 +4,6 @@
 
 
 // Section 1 - Catalogue
-// TO-DO
-// 1. Add hover animation to anchor tag
 .catalogueContainer {
 
     .wrapper {
@@ -34,8 +32,6 @@
 }
 
 // Section 2 - Featured Sale
-// TO-DO
-// 1. Add underline hover animation
 .featuredSales {
     width: 90%;
     margin: 0 auto;
@@ -54,7 +50,7 @@
         padding: 2rem 0;
 
         .mainContainerItems {
-            @include borderStyle();
+            @include borderStyle(1px, solid, $lightGreyBorder);
             @include flexStyling(center, center);
             margin: 1rem;
             width: calc(20% - 2rem);
@@ -96,7 +92,7 @@
 
 
             .iconContainer {
-                @include borderStyle();
+                @include borderStyle(1px, solid, $lightGreyBorder);
                 padding: 0.1rem;
             }
 

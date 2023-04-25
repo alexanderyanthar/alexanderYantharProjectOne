@@ -30,11 +30,6 @@ footer {
             width: 25%;
         }
 
-
-        // refractor and condense contianer code into one styling unit
-        // logoIcons, contact, profile, forms can be one
-        // contact and profile are excatly ethe same styling so they can all have one class
-
         .logoIcons,
         .contact,
         .userProfile {
