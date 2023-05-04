@@ -756,7 +756,7 @@ footer .wrapper .form form fieldset [type=email] {
     flex-direction: column;
     background-color: #fff;
     text-align: center;
-    transition: 0.3s ease;
+    transition: 0.5s ease;
   }
   header .navBar .navItem {
     margin: 1rem 0 1rem 2rem;
