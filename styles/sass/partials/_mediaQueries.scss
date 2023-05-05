@@ -218,9 +218,28 @@
             .userProfile {
                 align-items: center;
                 margin: 1rem;
-                height: auto;
                 width: calc(45% - 2rem);
+                height: 100%;
             }
+
+            .contact h3,
+            .userProfile h3 {
+                position: relative;
+            }
+            
+            .contact ul li,
+            .userProfile ul li {
+                height: 0px;
+                overflow: hidden;
+                transition: 0.5s;
+            }
+
+            .contact.active ul li,
+            .userProfile.active ul li {
+                height: 30px;
+                transition: 0.5s;
+            }
+
         }
     }
     

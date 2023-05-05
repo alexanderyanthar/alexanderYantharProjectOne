@@ -876,8 +876,23 @@ footer .wrapper .form form fieldset [type=email] {
   footer .wrapper .userProfile {
     align-items: center;
     margin: 1rem;
-    height: auto;
     width: calc(45% - 2rem);
+    height: 100%;
+  }
+  footer .wrapper .contact h3,
+  footer .wrapper .userProfile h3 {
+    position: relative;
+  }
+  footer .wrapper .contact ul li,
+  footer .wrapper .userProfile ul li {
+    height: 0px;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  footer .wrapper .contact.active ul li,
+  footer .wrapper .userProfile.active ul li {
+    height: 30px;
+    transition: 0.5s;
   }
 }
 @media (max-width: 450px) {
