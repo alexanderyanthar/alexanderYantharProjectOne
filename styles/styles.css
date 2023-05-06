@@ -756,10 +756,13 @@ footer .wrapper .form form fieldset [type=email] {
   header .navBar .navMenu.active {
     left: 0;
   }
-  header .headerContainer {
+  header .indexContainer {
     height: 90vh;
   }
-  header .headerContainer .wrapper {
+  header .indexContainer .contactContainer {
+    height: 30vh;
+  }
+  header .indexContainer .wrapper {
     margin: 0 auto;
     justify-content: flex-start;
     padding-top: 4rem;
@@ -844,6 +847,9 @@ footer .wrapper .form form fieldset [type=email] {
   .followInstagram .wrapper .gallery li:nth-of-type(3) {
     display: none;
   }
+  footer {
+    padding: 2rem 0;
+  }
   footer .wrapper {
     height: auto;
     flex-wrap: wrap;
@@ -870,7 +876,6 @@ footer .wrapper .form form fieldset [type=email] {
   }
   footer .wrapper .form {
     padding-top: 1rem;
-    border-top: 1px solid #fff;
     text-align: center;
   }
   footer .wrapper .form form {
@@ -879,12 +884,39 @@ footer .wrapper .form form fieldset [type=email] {
   footer .wrapper .form form input[type=email] {
     margin-top: 1rem;
   }
+  footer .wrapper .form form h3,
+  footer .wrapper .form form .copyright {
+    margin-top: 1rem;
+  }
+  footer .wrapper .userProfile h3 {
+    margin-top: 1rem;
+  }
   footer .wrapper .contact,
   footer .wrapper .userProfile {
     align-items: center;
-    margin: 1rem;
     height: auto;
-    width: calc(45% - 2rem);
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 1rem;
+    margin-right: 0;
+  }
+  footer .wrapper .contact ul {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  footer .wrapper .contact.active ul {
+    height: 155px;
+  }
+  footer .wrapper .userProfile ul {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  footer .wrapper .userProfile.active ul {
+    height: 158px;
   }
 }
 @media (max-width: 450px) {

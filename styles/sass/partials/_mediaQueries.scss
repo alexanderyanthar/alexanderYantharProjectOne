@@ -62,8 +62,12 @@
             }
 
         }
-        .headerContainer {
+        .indexContainer {
             height: 90vh;
+
+        .contactContainer {
+            height: 30vh;
+        }
 
             .wrapper {
                 margin: 0 auto;
@@ -181,56 +185,91 @@
     } 
 
     // footer
-    footer .wrapper {
-        height: auto;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin: 0 auto;
+    footer {
+        padding: 2rem 0;
+        .wrapper {
+                height: auto;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin: 0 auto;
+        
+                .logoIcons,
+                .form {
+                    width: 100%;
+                    align-items: center;
+                    margin: 1rem 0;
+                }
+        
+                .logoIcons {
+                    padding-bottom: 1rem;
+                    border-bottom: 1px solid $white;
+                    text-align: center;
+        
+                    .logo {
+                        width: 25%;
+                    }
+        
+                    ul {
+                        width: 100%;
+                        justify-content: space-around;
+                    }
+                }
+        
+                .form {
+                    padding-top: 1rem;
+                    text-align: center;
+        
+                    form {
+                        width: 100%;
+        
+                        input[type=email] {
+                            margin-top: 1rem;
+                        }
 
-        .logoIcons,
-        .form {
-            width: 100%;
-            align-items: center;
-            margin: 1rem 0;
-        }
-
-        .logoIcons {
-            padding-bottom: 1rem;
-            border-bottom: 1px solid $white;
-            text-align: center;
-
-            .logo {
-                width: 25%;
-            }
-
-            ul {
-                width: 100%;
-                justify-content: space-around;
-            }
-        }
-
-        .form {
-            padding-top: 1rem;
-            border-top: 1px solid $white;
-            text-align: center;
-
-            form {
-                width: 100%;
-
-                input[type=email] {
+                        h3,
+                        .copyright {
+                            margin-top: 1rem;
+                        }
+                    }
+                }
+        
+                .userProfile h3 {
                     margin-top: 1rem;
                 }
+        
+                .contact,
+                .userProfile {
+                    align-items: center;
+                    height: auto;
+                    width: 100%;
+                    border-bottom: 1px solid $white;
+                    padding-bottom: 1rem;
+                    margin-right: 0;
+                }
+        
+                .contact ul {
+                    position: relative;
+                    height: 0;
+                    overflow: hidden;
+                    transition: 0.5s;
+                }
+        
+                .contact.active ul {
+                    height: 155px;
+                }
+        
+                .userProfile ul {
+                    position: relative;
+                    height: 0;
+                    overflow: hidden;
+                    transition: 0.5s;
+                }
+        
+                .userProfile.active ul {
+                    height: 158px;
+                }
             }
-        }
-
-        .contact,
-        .userProfile {
-            align-items: center;
-            margin: 1rem;
-            height: auto;
-            width: calc(45% - 2rem);
-        }
-    }
+    } 
 }
 
 @media (max-width: $phone) {
