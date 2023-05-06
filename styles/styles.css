@@ -876,7 +876,8 @@ footer .wrapper .form form fieldset [type=email] {
     width: 25%;
   }
   footer .wrapper .logoIcons ul {
-    width: 50%;
+    width: 100%;
+    justify-content: space-around;
   }
   footer .wrapper .form {
     text-align: center;
