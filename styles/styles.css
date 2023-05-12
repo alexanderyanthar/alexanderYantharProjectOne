@@ -335,6 +335,9 @@ ul {
   transform-origin: bottom left;
 }
 
+header {
+  /* Darken the entire viewport background */
+}
 header .navBar {
   justify-content: space-between;
   align-items: center;
@@ -394,23 +397,66 @@ header .modal {
   display: none;
   position: fixed;
   z-index: 1;
-  left: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+header .modalBackground {
+  display: none;
+  position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
+  /* Set the opacity to 0.5 to darken the background */
+  z-index: 1;
 }
-header .modal-content {
+header .modalContent {
   position: relative;
-  background-color: #fefefe;
+  background-color: #fff;
   margin: auto;
   padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 500px;
+  border: 1px solid rgba(102, 102, 102, 0.3098039216);
+  box-shadow: 0 0 10px;
+  width: 100%;
+  max-width: 700px;
   animation-name: zoom;
   animation-duration: 0.6s;
+  height: 400px;
+  text-align: center;
+}
+header .modalContent h2 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #333;
+}
+header .modalContent p {
+  margin: 1rem 0;
+  font-size: 1.25rem;
+}
+header .modalContent p .moneyOff {
+  color: #eba0aa;
+  font-size: 1.5rem;
+}
+header .modalContent form {
+  display: flex;
+  padding-top: 1rem;
+  align-items: center;
+}
+header .modalContent form input {
+  width: 70%;
+  height: 80%;
+  padding: 0.5rem;
+  border: 1px solid rgba(102, 102, 102, 0.3098039216);
+  font-size: 0.95rem;
+}
+header .modalContent form input:focus {
+  outline: none;
+}
+header .modalContent form button {
+  border-color: rgba(102, 102, 102, 0.3098039216);
 }
 @keyframes zoom {
   from {
@@ -426,8 +472,11 @@ header .close {
   right: 0;
   font-size: 28px;
   font-weight: bold;
-  color: #aaa;
+  color: rgba(102, 102, 102, 0.3098039216);
   cursor: pointer;
+}
+header .close:hover {
+  color: rgba(255, 0, 0, 0.5);
 }
 
 .catalogueContainer .wrapper {

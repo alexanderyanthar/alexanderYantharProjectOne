@@ -4,12 +4,14 @@ const navMenu = document.querySelector(".navMenu");
 let lastScrollY = window.scrollY;
 const contact = document.querySelector('.contact');
 const userProfile = document.querySelector('.userProfile');
-
+const modalBackground = document.querySelector('.modalBackground');
+const submitBtn = document.getElementById('submitButton');
+const emailInput = document.getElementById("email");
 // Get the modal
-var modal = document.getElementById("newsletter-modal");
+var modal = document.getElementById("newsletterModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("newsletter-btn");
+var btn = document.getElementById("newsletterBtn");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -63,47 +65,68 @@ document.querySelectorAll(".navLink").forEach(n => n.addEventListener('click', c
 // Check if the modal has been displayed before
 // Check if the newsletter has already been displayed
 const value = localStorage.getItem('newsletterDisplayed');
-console.log(value); // Output the value to the console
-
-if (value) {
-    console.log('Value is truthy');
-} else {
-    console.log('Value is falsy');
-}
-
 
 if (!localStorage.getItem('newsletterDisplayed')) {
 
     // Get the halfway point of the page
     const halfHeight = Math.floor(document.body.scrollHeight / 2);
-    console.log('halfHeight:', halfHeight);
 
     // Check if the user has scrolled past the halfway point
     window.addEventListener('scroll', function () {
         if (window.pageYOffset >= halfHeight) {
-            console.log('User has scrolled passed halfway');
 
             // Display the newsletter
             // ...
             modal.style.display = "block";
+            modalBackground.style.display = "block";
+
 
             // When the user clicks on <span> (x), close the modal
             span.onclick = function () {
                 modal.style.display = "none";
+                modalBackground.style.display = "none";
             };
 
             window.onclick = function (event) {
                 if (event.target == modal) {
                     modal.style.display = "none";
+                    modalBackground.style.display = "none";
                 }
             };
 
             // Set the flag indicating that the newsletter has been displayed
             localStorage.setItem('newsletterDisplayed', true);
-            console.log('newsletter displayed');
+
+            emailInput.addEventListener('input', function () {
+                const email = this.value.trim();
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if (!emailRegex.test(email)) {
+                    this.style.border = '2px solid red';
+                } else {
+                    this.style.border = '2px solid green';
+                }
+            });
+
+
+            submitBtn.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = this.value.trim();
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if (!emailRegex.test(email)) {
+                    emailInput.style.border = '2px solid red';
+                } else {
+                    modal.style.display = 'none';
+                    modalBackground.style.display = 'none';
+                }
+            });
 
             // Remove the scroll event listener
             window.removeEventListener('scroll', arguments.callee);
         }
     });
 }
+
+
+
