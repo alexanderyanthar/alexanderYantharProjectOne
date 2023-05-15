@@ -663,7 +663,16 @@ header .close:hover {
 
 footer {
   background-color: #333;
-  padding: 4rem 0;
+  padding: 4rem 0 1rem;
+}
+footer .copyright {
+  margin-top: 2rem;
+}
+footer .copyright p {
+  color: #fff;
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid #fff;
 }
 footer .wrapper {
   display: flex;
@@ -684,11 +693,9 @@ footer .wrapper .footerContainer {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  width: 25%;
 }
 footer .wrapper .logoIcons,
-footer .wrapper .contact,
-footer .wrapper .userProfile {
+footer .wrapper .contact {
   margin-right: 1rem;
 }
 footer .wrapper .row1 {
@@ -696,6 +703,9 @@ footer .wrapper .row1 {
 }
 footer .wrapper .row2 {
   height: 80%;
+}
+footer .wrapper .logoIcons {
+  width: 33%;
 }
 footer .wrapper .logoIcons .logo {
   width: 50%;
@@ -721,6 +731,9 @@ footer .wrapper .logoIcons ul li {
 footer .wrapper .logoIcons li:first-child {
   width: 0.7rem;
 }
+footer .wrapper .contact {
+  width: 33%;
+}
 footer .wrapper .contact h3 {
   margin-bottom: 1rem;
 }
@@ -744,6 +757,10 @@ footer .wrapper .contact h3,
 footer .wrapper .userProfile h3 {
   margin-bottom: 1rem;
 }
+footer .wrapper .contact h3 i,
+footer .wrapper .userProfile h3 i {
+  display: none;
+}
 footer .wrapper .contact ul,
 footer .wrapper .userProfile ul {
   justify-content: space-between;
@@ -761,29 +778,6 @@ footer .wrapper .userProfile ul li img {
   width: 1rem;
   display: inline-block;
   margin-right: 0.25rem;
-}
-footer .wrapper .form form {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-footer .wrapper .form form .row2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-footer .wrapper .form form .subscribe {
-  margin-top: 1rem;
-}
-footer .wrapper .form form fieldset {
-  border: none;
-  padding: 0;
-}
-footer .wrapper .form form fieldset [type=email] {
-  background-color: #333;
-  padding-bottom: 0.5rem;
-  width: 100%;
 }
 
 .contactForm .wrapper fieldset {
@@ -938,6 +932,9 @@ footer .wrapper .form form fieldset [type=email] {
   footer {
     padding: 2rem 0;
   }
+  footer .copyright p {
+    border: none;
+  }
   footer .wrapper {
     height: auto;
     flex-wrap: wrap;
@@ -962,20 +959,6 @@ footer .wrapper .form form fieldset [type=email] {
     width: 100%;
     justify-content: space-around;
   }
-  footer .wrapper .form {
-    padding-top: 1rem;
-    text-align: center;
-  }
-  footer .wrapper .form form {
-    width: 100%;
-  }
-  footer .wrapper .form form input[type=email] {
-    margin-top: 1rem;
-  }
-  footer .wrapper .form form h3,
-  footer .wrapper .form form .copyright {
-    margin-top: 1rem;
-  }
   footer .wrapper .userProfile h3 {
     margin-top: 1rem;
   }
@@ -987,6 +970,10 @@ footer .wrapper .form form fieldset [type=email] {
     border-bottom: 1px solid #fff;
     padding-bottom: 1rem;
     margin-right: 0;
+  }
+  footer .wrapper .contact h3 i,
+  footer .wrapper .userProfile h3 i {
+    display: inline-block;
   }
   footer .wrapper .contact ul {
     position: relative;
@@ -1095,11 +1082,6 @@ footer .wrapper .form form fieldset [type=email] {
     margin-top: 0;
     border-bottom: 1px solid #fff;
     padding-bottom: 1rem;
-  }
-  footer .wrapper .form {
-    border-top: none;
-    padding-top: 0;
-    margin-top: 0;
   }
 }
 @media (max-width: 350px) {
