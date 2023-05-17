@@ -5,7 +5,8 @@ let lastScrollY = window.scrollY;
 const contact = document.querySelector('.contact');
 const userProfile = document.querySelector('.userProfile');
 const modalBackground = document.querySelector('.modalBackground');
-const submitBtn = document.getElementById('submitButton');
+const submitBtn = document.querySelector('#submit[type=submit]');
+const form = document.querySelector('form');
 const emailInput = document.getElementById("email");
 // Get the modal
 var modal = document.getElementById("newsletterModal");
@@ -109,10 +110,12 @@ if (!localStorage.getItem('newsletterDisplayed')) {
             });
 
 
-            submitBtn.addEventListener('submit', function(e) {
-                e.preventDefault();
+            // In the else part of the function, change what happens by adding a class to the modal display which would hide the previous modal and show the new text.
+            form.addEventListener('submit', function(e) {
+                // e.preventDefault();
                 const email = this.value.trim();
                 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                
 
                 if (!emailRegex.test(email)) {
                     emailInput.style.border = '2px solid red';
@@ -121,6 +124,8 @@ if (!localStorage.getItem('newsletterDisplayed')) {
                     modalBackground.style.display = 'none';
                 }
             });
+
+            // Prevent form submission unless all required inputs are filled
 
             // Remove the scroll event listener
             window.removeEventListener('scroll', arguments.callee);
