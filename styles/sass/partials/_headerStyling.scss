@@ -30,6 +30,18 @@ header {
                 }
             }
         }
+
+        .checkout {
+            position: relative;
+
+            .cartAmount {
+                    font-size: 0.75rem;
+                    color: $lightGrey;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+        }
     }
 
     .headerContainer {

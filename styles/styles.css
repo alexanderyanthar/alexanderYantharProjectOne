@@ -361,6 +361,16 @@ header .navBar nav ul a {
 header .navBar nav ul li:last-child {
   margin-right: 0;
 }
+header .navBar .checkout {
+  position: relative;
+}
+header .navBar .checkout .cartAmount {
+  font-size: 0.75rem;
+  color: #666;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 header .headerContainer {
   height: 100vh;
 }
