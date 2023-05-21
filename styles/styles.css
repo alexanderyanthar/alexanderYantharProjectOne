@@ -342,6 +342,10 @@ header .navBar {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 2rem;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background: #fff;
 }
 header .navBar .hamburgerMenu {
   display: none;
@@ -516,6 +520,40 @@ header .close:hover {
 .featuredSales {
   width: 90%;
   margin: 0 auto;
+}
+.featuredSales .modalItem {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Add other styles as needed */
+}
+.featuredSales .closeItem {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: rgba(102, 102, 102, 0.3098039216);
+  cursor: pointer;
+}
+.featuredSales .modalContent {
+  position: relative;
+  background-color: #fff;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid rgba(102, 102, 102, 0.3098039216);
+  box-shadow: 0 0 10px;
+  width: 100%;
+  max-width: 700px;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+  height: 400px;
+  text-align: center;
+}
+.featuredSales .closeItem:hover {
+  color: rgba(255, 0, 0, 0.5);
 }
 .featuredSales h2 {
   width: 100%;

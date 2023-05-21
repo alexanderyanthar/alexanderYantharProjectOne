@@ -7,8 +7,12 @@ const modalBackground = document.querySelector('.modalBackground');
 const submitBtn = document.querySelector('#submitButton');
 const form = document.querySelector('form');
 const emailInput = document.getElementById("email");
-const modal = document.querySelector(".modal");
-const span = document.getElementsByClassName("close")[0];
+const newsletterModal = document.querySelector(".modal");
+const close = document.querySelector(".close");
+const closeItem = document.querySelector('.closeItem');
+const modalTrigger = document.querySelectorAll('.modalTrigger');
+const modalItem = document.querySelector('.modalItem');
+
 
 
 /* resources
@@ -61,12 +65,12 @@ if (!localStorage.getItem('newsletterDisplayed')) {
     window.addEventListener('scroll', function () {
         if (window.pageYOffset >= halfHeight) {
 
-            modal.style.display = "block";
+            newsletterModal.style.display = "block";
             modalBackground.style.display = "block";
 
 
-            span.onclick = function () {
-                modal.style.display = "none";
+            close.onclick = function () {
+                newsletterModal.style.display = "none";
                 modalBackground.style.display = "none";
             };
 
@@ -102,6 +106,31 @@ if (!localStorage.getItem('newsletterDisplayed')) {
         }
     });
 }
+
+function openModal() {
+  modalItem.style.display = 'block';
+}
+
+modalTrigger.forEach((trigger) => trigger.addEventListener('click', openModal));
+
+
+const modalContent = document.querySelector('.modalContent');
+
+
+function closeModal() {
+  modalItem.style.display = 'none';
+}
+
+
+closeItem.addEventListener('click', closeModal);
+modalContent.addEventListener('click', closeModal);
+
+
+modalContent.addEventListener('click', (event) => {
+  event.stopPropagation();
+});
+
+
 
 
 

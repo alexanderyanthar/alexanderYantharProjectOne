@@ -33,6 +33,45 @@
 
 // Section 2 - Featured Sale
 .featuredSales {
+
+    .modalItem {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* Add other styles as needed */
+    }
+
+    .closeItem {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 28px;
+        font-weight: bold;
+        color: $lightGreyBorder;
+        cursor: pointer;
+    }
+
+    .modalContent {
+        position: relative;
+        background-color: $white;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid $lightGreyBorder;
+        box-shadow: 0 0 10px;
+        width: 100%;
+        max-width: 700px;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+        height: 400px;
+        text-align: center;
+    }
+
+    .closeItem:hover {
+        color: rgb(255, 0, 0, 0.5);
+    }
+
     width: 90%;
     margin: 0 auto;
     h2 {

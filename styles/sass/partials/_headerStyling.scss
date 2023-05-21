@@ -6,7 +6,10 @@ header {
     .navBar {
         @include flexStyling(space-between, center);
         padding: 1.5rem 2rem;
-
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+        background: $white;
         .hamburgerMenu {
             display: none;
         }
