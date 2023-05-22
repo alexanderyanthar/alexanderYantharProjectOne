@@ -9,9 +9,6 @@ const form = document.querySelector('form');
 const emailInput = document.getElementById("email");
 const newsletterModal = document.querySelector(".modal");
 const close = document.querySelector(".close");
-const closeItem = document.querySelector('.closeItem');
-const modalTrigger = document.querySelectorAll('.modalTrigger');
-const modalItem = document.querySelector('.modalItem');
 
 
 
@@ -107,28 +104,76 @@ if (!localStorage.getItem('newsletterDisplayed')) {
     });
 }
 
-function openModal() {
-  modalItem.style.display = 'block';
+const modalItem = document.querySelector('.modalItem');
+const modalTrigger = document.querySelector(".modalTrigger");
+
+function openModal(itemId) {
+    modalItem.style.display = "block";
+    // Fetch item information and update the modal content
+    fetchItemData(itemId).then(function(data) {
+        document.querySelector(".itemImage").src = data.image;
+        document.querySelector(".itemName").textContent = data.name;
+        document.querySelector(".itemPrice").textContent = "Price: $" + data.price;
+        document.querySelector('.itemDescription').textContent = data.description;
+    }).catch(function(error) {
+    console.error(error);
+    closeModal();
+  });
 }
 
-modalTrigger.forEach((trigger) => trigger.addEventListener('click', openModal));
+const cartIcons = document.querySelectorAll('.modalTrigger');
+
+cartIcons.forEach(function(icon){
+    const itemId = icon.getAttribute("data-item-id");
+
+    icon.addEventListener('click', function(){
+        openModal(itemId);
+    })
+})
 
 
-const modalContent = document.querySelector('.modalContent');
-
+const closeItem = document.querySelector('.closeItem');
 
 function closeModal() {
-  modalItem.style.display = 'none';
+  modalItem.style.display = "none";
+}
+
+closeItem.addEventListener('click', closeModal);
+
+function fetchItemData(itemId) {
+  // Simulating an asynchronous API call
+  return new Promise(function(resolve, reject) {
+      const dataObj = {
+        item1: {
+            image: "./assets/prod-1.jpg",
+            name: "Malm Chair",
+            price: 22,
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque harum velit ullam temporibus quo animi at consectetur saepe esse sint."
+        },
+        item2: {
+            image: "./assets/prod-2.jpg",
+            name: 'Pendant Lamp',
+            price: 45,
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque harum velit ullam temporibus quo animi at consectetur saepe esse sint."
+        },
+        item3: {
+            image: "./assets/prod-3.jpg",
+            name: "Magnolia Dream",
+            price: 18,
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque harum velit ullam temporibus quo animi at consectetur saepe esse sint."
+        }
+      };
+
+    if (dataObj.hasOwnProperty(itemId)) {
+    const data = dataObj[itemId];
+    resolve(data);
+    } else {
+        reject(new Error("Item not found"));
+    }
+  });
 }
 
 
-closeItem.addEventListener('click', closeModal);
-modalContent.addEventListener('click', closeModal);
-
-
-modalContent.addEventListener('click', (event) => {
-  event.stopPropagation();
-});
 
 
 

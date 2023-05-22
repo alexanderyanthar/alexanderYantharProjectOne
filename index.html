@@ -90,8 +90,20 @@
             <div id="myModal" class="modalItem">
                 <div class="modalContent">
                     <span class="closeItem">&times;</span>
-                    <h3>Item Details</h3>
-                    <p>Additional information about the item goes here.</p>
+                    <div class="imageContainer">
+                        <img class="itemImage" src="#" alt="a stylish white chair with wooden legs">
+                    </div>
+                    <div class="itemDetails">
+                        <h3 class="itemName"></h3>
+                        <p class="itemDescription"></p>
+                        <p class="itemPrice"></p>
+                        <div class="cart">
+                            <p>Add to Cart</p>
+                            <a href="#checkout">
+                                <img class="cart" src="./assets/icons/shopping-cart-black-icon.png" alt="Checkout icon to add item to cart">
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <h2><a class="hoverUnderlineAnimation" href="#featuredSale">Featured Sale</a></h2>
@@ -106,7 +118,7 @@
                                     <p class="price"><span>$35</span> $22</p>
                                 </div>
                                 <div class="iconContainer">
-                                    <a href="#checkout" class="modalTrigger">
+                                    <a href="#checkout" class="modalTrigger" data-item-id="item1">
                                         <img src="./assets/icons/shopping-cart-black-icon.png" alt="Checkout icon to add item to cart">
                                     </a>
                                 </div>
@@ -123,7 +135,7 @@
                                     <p class="price">$45</p>
                                 </div>
                                 <div class="iconContainer">
-                                    <a href="#checkout" class="modalTrigger">
+                                    <a href="#checkout" class="modalTrigger" data-item-id="item2">
                                         <img src="./assets/icons/shopping-cart-black-icon.png" alt="Checkout icon to add item to cart">
                                     </a>
                                 </div>
@@ -140,7 +152,7 @@
                                     <p class="price">$18</p>
                                 </div>
                                 <div class="iconContainer">
-                                    <a href="#checkout" class="modalTrigger">
+                                    <a href="#checkout" class="modalTrigger" data-item-id="item3">
                                         <img src="./assets/icons/shopping-cart-black-icon.png" alt="Checkout icon to add item to cart">
                                     </a>
                                 </div>
