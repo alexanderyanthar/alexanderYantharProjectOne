@@ -1,3 +1,5 @@
+import { fetchItemData  } from "./firebase.js";
+
 const hamburger = document.querySelector(".hamburgerMenu");
 const navMenu = document.querySelector(".navMenu");
 let lastScrollY = window.scrollY;
@@ -140,38 +142,6 @@ function closeModal() {
 
 closeItem.addEventListener('click', closeModal);
 
-function fetchItemData(itemId) {
-  // Simulating an asynchronous API call
-  return new Promise(function(resolve, reject) {
-      const dataObj = {
-        item1: {
-            image: "./assets/prod-1.jpg",
-            name: "Malm Chair",
-            price: 22,
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque harum velit ullam temporibus quo animi at consectetur saepe esse sint."
-        },
-        item2: {
-            image: "./assets/prod-2.jpg",
-            name: 'Pendant Lamp',
-            price: 45,
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque harum velit ullam temporibus quo animi at consectetur saepe esse sint."
-        },
-        item3: {
-            image: "./assets/prod-3.jpg",
-            name: "Magnolia Dream",
-            price: 18,
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque harum velit ullam temporibus quo animi at consectetur saepe esse sint."
-        }
-      };
-
-    if (dataObj.hasOwnProperty(itemId)) {
-    const data = dataObj[itemId];
-    resolve(data);
-    } else {
-        reject(new Error("Item not found"));
-    }
-  });
-}
 
 
 
