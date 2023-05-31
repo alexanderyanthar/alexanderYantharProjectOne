@@ -132,26 +132,9 @@ header {
                     font-size: 1.5rem;
                 }
         }
-
-        form {
-            display: flex;
-            padding-top: 1rem;
-            align-items: center;
-            input {
-                width: 70%;
-                height: 80%;
-                padding: 0.5rem;
-                border: 1px solid $lightGreyBorder;
-                font-size: 0.95rem;
-            }
-
-            input:focus {
-                outline: none;
-            }
-
-            button {
-                border-color: $lightGreyBorder;
-            }
+        button {
+            border-color: $darkGrey;
+            margin: 1rem;
         }
     }
 

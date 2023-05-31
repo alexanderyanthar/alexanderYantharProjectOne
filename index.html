@@ -56,11 +56,7 @@
                     <span class="close">&times;</span>
                     <h2>Subscribe to our newsletter</h2>
                     <p>Join today and receive and exclusive <span class="moneyOff">$20</span> off your first order!</p>
-                    <form>
-                        <label for="email"></label>
-                        <input type="email" id="email" name="email" placeholder="Email Address *" required>
-                        <button id="submitButton">Subscribe</button>
-                    </form>
+                    <button id="submitButton">Subscribe</button>
                 </div>
             </div>
     </header>
@@ -406,10 +402,21 @@
                     </li>
                 </ul>
             </div>
+            <div class="form footerContainer">
+                <form class="flexColumn" action="#">
+                    <h3 class="row1">Newsletter</h3>
+                    <div class="row2">
+                        <p class="subscribe">Subscribe to our newsletter</p>
+                        <fieldset id="newsletterForm">
+                            <label for="email" class="sr-only">Your e-mail</label>
+                            <input type="email" placeholder="Your e-mail.." id="email" required>
+                        </fieldset>
+                        <p class="copyright">@ 2023 Novas.</p>
+                    </div>
             
-        </div>
-        <div class="copyright">
-            <p>@ 2023 Novas.</p>
+                </form>
+            </div>
+            
         </div>
     </footer>
     <script type="module" src="./scripts/scripts.js"></script>

@@ -454,23 +454,9 @@ header .modalContent p .moneyOff {
   color: #eba0aa;
   font-size: 1.5rem;
 }
-header .modalContent form {
-  display: flex;
-  padding-top: 1rem;
-  align-items: center;
-}
-header .modalContent form input {
-  width: 70%;
-  height: 80%;
-  padding: 0.5rem;
-  border: 1px solid rgba(102, 102, 102, 0.3098039216);
-  font-size: 0.95rem;
-}
-header .modalContent form input:focus {
-  outline: none;
-}
-header .modalContent form button {
-  border-color: rgba(102, 102, 102, 0.3098039216);
+header .modalContent button {
+  border-color: #333;
+  margin: 1rem;
 }
 @keyframes zoom {
   from {
@@ -772,6 +758,7 @@ footer .wrapper .footerContainer {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  width: 33%;
 }
 footer .wrapper .logoIcons,
 footer .wrapper .contact {
@@ -857,6 +844,29 @@ footer .wrapper .userProfile ul li img {
   width: 1rem;
   display: inline-block;
   margin-right: 0.25rem;
+}
+footer .wrapper .form form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+footer .wrapper .form form .row2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+footer .wrapper .form form .subscribe {
+  margin: 1rem 0;
+}
+footer .wrapper .form form fieldset {
+  border: none;
+  padding: 0;
+}
+footer .wrapper .form form fieldset [type=email] {
+  background-color: #333;
+  padding-bottom: 0.5rem;
+  width: 100%;
 }
 
 .contactForm .wrapper fieldset {
@@ -1072,6 +1082,19 @@ footer .wrapper .userProfile ul li img {
   footer .wrapper .userProfile.active ul {
     height: 158px;
   }
+  footer .wrapper .form {
+    padding-top: 1rem;
+    text-align: center;
+  }
+  footer .wrapper .form form {
+    width: 100%;
+  }
+  footer .wrapper .form form p {
+    padding-top: 1rem;
+  }
+  footer .wrapper .form form input[type=email] {
+    margin-top: 1rem;
+  }
 }
 @media (max-width: 450px) {
   header .headerContainer {
@@ -1161,6 +1184,11 @@ footer .wrapper .userProfile ul li img {
     margin-top: 0;
     border-bottom: 1px solid #fff;
     padding-bottom: 1rem;
+  }
+  footer .wrapper .form {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 1rem;
   }
 }
 @media (max-width: 350px) {

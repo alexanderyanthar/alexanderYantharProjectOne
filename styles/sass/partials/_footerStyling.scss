@@ -37,7 +37,7 @@ footer {
             flex-direction: column;
             justify-content: space-between;
             height: 100%;
-            // width: 33%;
+            width: 33%;
         }
 
         .logoIcons,
@@ -141,6 +141,43 @@ footer {
                     width: 1rem;
                     display: inline-block;
                     margin-right: 0.25rem;
+                }
+            }
+        }
+
+        // newsletter form
+        
+        .form {
+            
+
+            form {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                
+
+                .row2 {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+
+                .subscribe {
+                    margin: 1rem 0;
+                }
+
+
+                fieldset {
+                    border: none;
+                    padding: 0;
+                    
+                }
+
+                fieldset [type=email] {
+                    background-color: $darkGrey;
+                    padding-bottom: 0.5rem;
+                    width: 100%;
                 }
             }
         }

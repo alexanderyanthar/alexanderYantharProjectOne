@@ -50,63 +50,58 @@ document.querySelectorAll(".navLink").forEach(n => n.addEventListener('click', c
 
 const value = localStorage.getItem('newsletterDisplayed');
 
-if (localStorage.getItem('newsletterDisplayed')) {
-
+if (!localStorage.getItem('newsletterDisplayed')) {
 
     const halfHeight = Math.floor(document.body.scrollHeight / 2);
 
-    window.addEventListener('scroll', function () {
-        if (window.pageYOffset >= halfHeight) {
-            const modalBackground = document.querySelector('.modalBackground');
-            const emailInput = document.getElementById("email");
-            const newsletterModal = document.querySelector(".modal");
-            const close = document.querySelector(".close");
+    function displayNewsletterModal() {
+        const modalBackground = document.querySelector('.modalBackground');
+        const emailInput = document.getElementById("email");
+        const newsletterModal = document.querySelector(".modal");
+        const close = document.querySelector(".close");
 
+        newsletterModal.style.display = "block";
+        modalBackground.style.display = "block";
 
-            newsletterModal.style.display = "block";
-            modalBackground.style.display = "block";
-
-
-            close.onclick = function () {
-                newsletterModal.style.display = "none";
-                modalBackground.style.display = "none";
-            };
-
-            localStorage.setItem('newsletterDisplayed', true);
-
-            emailInput.addEventListener('input', function () {
-                const email = this.value.trim();
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-                if (!emailRegex.test(email)) {
-                    this.style.border = '2px solid red';
-                } else {
-                    this.style.border = '2px solid green';
-                }
-            });
-
-            const form = document.querySelector('form');
-
-            form.addEventListener('submit', function(e) {
-                const submitBtn = document.querySelector('#submitButton');
-                const email = this.value.trim();
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                
-
-                if (!emailRegex.test(email)) {
-                    emailInput.style.border = '2px solid red';
-                    // can't get the else code to work
-                } else {
-                    modalContent.innerHTML = '<h2>Thank you for subscribing!</h2><p>You are now subscribed to our newsletter.</p>';
-
-                    submitBtn.style.display = 'none';
-                }
-            });
-
-            window.removeEventListener('scroll', arguments.callee);
+        function closeNewsletterModal() {
+            newsletterModal.style.display = 'none';
+            modalBackground.style.display = 'none';
         }
-    });
+
+        close.addEventListener('click', closeNewsletterModal);
+
+        localStorage.setItem('newsletterDisplayed', true);
+
+        const button = document.querySelector('#submitButton');
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetForm = document.getElementById('newsletterForm');
+            const targetPos = targetForm.offsetTop;
+
+            window.scrollTo({
+                top: targetPos,
+                behavior: "smooth"
+            });
+
+            closeNewsletterModal();
+            addBorderWithFade(targetForm);
+
+            function addBorderWithFade(element) {
+                element.style.border = '2px solid green';
+                element.style.transition = 'border-color ease-in-out 0.3s'
+                setTimeout(function() {
+                    element.style.border = 'none';
+                    element.style.transition = '';
+                }, 3000);
+            }
+        });
+
+        window.removeEventListener('scroll', displayNewsletterModal);
+    }
+
+    window.addEventListener('scroll', displayNewsletterModal);
 }
+
 
 const modalItem = document.querySelector('.modalItem');
 
