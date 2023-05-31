@@ -3,12 +3,10 @@ const navMenu = document.querySelector(".navMenu");
 let lastScrollY = window.scrollY;
 const contact = document.querySelector('.contact');
 const userProfile = document.querySelector('.userProfile');
-const modalBackground = document.querySelector('.modalBackground');
-const submitBtn = document.querySelector('#submitButton');
-const form = document.querySelector('form');
-const emailInput = document.getElementById("email");
-const newsletterModal = document.querySelector(".modal");
-const close = document.querySelector(".close");
+
+
+
+
 
 
 
@@ -55,12 +53,16 @@ document.querySelectorAll(".navLink").forEach(n => n.addEventListener('click', c
 
 const value = localStorage.getItem('newsletterDisplayed');
 
-if (!localStorage.getItem('newsletterDisplayed')) {
+if (localStorage.getItem('newsletterDisplayed')) {
 
     const halfHeight = Math.floor(document.body.scrollHeight / 2);
 
     window.addEventListener('scroll', function () {
         if (window.pageYOffset >= halfHeight) {
+            const modalBackground = document.querySelector('.modalBackground');
+            const emailInput = document.getElementById("email");
+            const newsletterModal = document.querySelector(".modal");
+            const close = document.querySelector(".close");
 
             newsletterModal.style.display = "block";
             modalBackground.style.display = "block";
@@ -84,7 +86,10 @@ if (!localStorage.getItem('newsletterDisplayed')) {
                 }
             });
 
+            const form = document.querySelector('form');
+
             form.addEventListener('submit', function(e) {
+                const submitBtn = document.querySelector('#submitButton');
                 const email = this.value.trim();
                 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 
