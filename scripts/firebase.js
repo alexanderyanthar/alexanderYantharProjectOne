@@ -19,70 +19,8 @@ appId: "1:889221898217:web:1dd6b4eac8047e40d57578"
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
-const items = {
-    item1: {
-        image: "./assets/prod-1.jpg",
-        name: 'Malm Chair',
-        price: 22,
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque harum velit ullam temporibus quo animi at consectetur saepe esse sint."
-    },
-    item2: {
-        image: "./assets/prod-2.jpg",
-        name: 'Pendant Lamp',
-        price: 45,
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque harum velit ullam temporibus quo animi at consectetur saepe esse sint."
-    },
-    item3: {
-        image: "./assets/prod-3.jpg",
-        name: "Magnolia Dream",
-        price: 18,
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque harum velit ullam temporibus quo animi at consectetur saepe esse sint."
-    },
-    item4: {
-        image: "./assets/prod-4.jpg",
-        name: 'Malm Chair',
-        price: 45,
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque harum velit ullam temporibus quo animi at consectetur saepe esse sint."
-    },
-    item5: {
-        image: "./assets/prod-5.jpg",
-        name: 'Pendant Lamp',
-        price: 45,
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque harum velit ullam temporibus quo animi at consectetur saepe esse sint."
-    },
-    item6: {
-        image: "./assets/prod-6.jpg",
-        name: 'Candle',
-        price: 45,
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque harum velit ullam temporibus quo animi at consectetur saepe esse sint."
-    },
-    item7: {
-        image: "./assets/prod-7.jpg",
-        name: 'Lorem Ipsum',
-        price: 45,
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque harum velit ullam temporibus quo animi at consectetur saepe esse sint."
-    },
-    item8: {
-        image: "./assets/prod-8.jpg",
-        name: 'Pendant Lamp',
-        price: 45,
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque harum velit ullam temporibus quo animi at consectetur saepe esse sint."
-    },
-    item9: {
-        image: "./assets/prod-9.jpg",
-        name: 'Malm Chair',
-        price: 45,
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque harum velit ullam temporibus quo animi at consectetur saepe esse sint."
-    },
-    item10: {
-        image: "./assets/prod-10.jpg",
-        name: 'Pendant Lamp',
-        price: 45,
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque harum velit ullam temporibus quo animi at consectetur saepe esse sint."
-    }
-};
 
-set(ref(database, 'items'), items)
+get(ref(database))
   .then(() => {
     console.log('Items saved successfully!');
   })

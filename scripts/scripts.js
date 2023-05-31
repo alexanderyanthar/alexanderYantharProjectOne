@@ -58,11 +58,13 @@ document.querySelectorAll(".navLink").forEach(n => n.addEventListener('click', c
 const value = localStorage.getItem('newsletterDisplayed');
 
 if (!localStorage.getItem('newsletterDisplayed')) {
+    
 
     const halfHeight = Math.floor(document.body.scrollHeight / 2);
 
     window.addEventListener('scroll', function () {
-        if (window.pageYOffset >= halfHeight) {
+        if (this.window.pageYOffset >= halfHeight) {
+            console.log('reached');
 
             newsletterModal.style.display = "block";
             modalBackground.style.display = "block";
@@ -107,7 +109,6 @@ if (!localStorage.getItem('newsletterDisplayed')) {
 }
 
 const modalItem = document.querySelector('.modalItem');
-const modalTrigger = document.querySelector(".modalTrigger");
 
 function openModal(itemId) {
     modalItem.style.display = "block";
