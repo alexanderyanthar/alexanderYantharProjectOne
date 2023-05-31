@@ -1,13 +1,10 @@
+import { fetchItemData  } from "./firebase.js";
+
 const hamburger = document.querySelector(".hamburgerMenu");
 const navMenu = document.querySelector(".navMenu");
 let lastScrollY = window.scrollY;
 const contact = document.querySelector('.contact');
 const userProfile = document.querySelector('.userProfile');
-
-
-
-
-
 
 
 /* resources
@@ -55,6 +52,7 @@ const value = localStorage.getItem('newsletterDisplayed');
 
 if (localStorage.getItem('newsletterDisplayed')) {
 
+
     const halfHeight = Math.floor(document.body.scrollHeight / 2);
 
     window.addEventListener('scroll', function () {
@@ -63,6 +61,7 @@ if (localStorage.getItem('newsletterDisplayed')) {
             const emailInput = document.getElementById("email");
             const newsletterModal = document.querySelector(".modal");
             const close = document.querySelector(".close");
+
 
             newsletterModal.style.display = "block";
             modalBackground.style.display = "block";
@@ -110,7 +109,6 @@ if (localStorage.getItem('newsletterDisplayed')) {
 }
 
 const modalItem = document.querySelector('.modalItem');
-const modalTrigger = document.querySelector(".modalTrigger");
 
 function openModal(itemId) {
     modalItem.style.display = "block";
@@ -145,38 +143,6 @@ function closeModal() {
 
 closeItem.addEventListener('click', closeModal);
 
-function fetchItemData(itemId) {
-  // Simulating an asynchronous API call
-  return new Promise(function(resolve, reject) {
-      const dataObj = {
-        item1: {
-            image: "./assets/prod-1.jpg",
-            name: "Malm Chair",
-            price: 22,
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque harum velit ullam temporibus quo animi at consectetur saepe esse sint."
-        },
-        item2: {
-            image: "./assets/prod-2.jpg",
-            name: 'Pendant Lamp',
-            price: 45,
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque harum velit ullam temporibus quo animi at consectetur saepe esse sint."
-        },
-        item3: {
-            image: "./assets/prod-3.jpg",
-            name: "Magnolia Dream",
-            price: 18,
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque harum velit ullam temporibus quo animi at consectetur saepe esse sint."
-        }
-      };
-
-    if (dataObj.hasOwnProperty(itemId)) {
-    const data = dataObj[itemId];
-    resolve(data);
-    } else {
-        reject(new Error("Item not found"));
-    }
-  });
-}
 
 
 
