@@ -5,6 +5,8 @@ const navMenu = document.querySelector(".navMenu");
 let lastScrollY = window.scrollY;
 const contact = document.querySelector('.contact');
 const userProfile = document.querySelector('.userProfile');
+const checkout = document.querySelector('.checkout');
+const cart = document.querySelector('.cart');
 
 
 /* resources
@@ -15,6 +17,11 @@ To build a functional hamburger menu/responsive navbar:
 https://www.youtube.com/watch?v=At4B7A4GOPg&t=2s&ab_channel=WebDevSimplified
 */
 
+
+
+checkout.addEventListener('click', function() {
+    cart.classList.toggle('active');
+})
 
 contact.addEventListener('click', function(){
     contact.classList.toggle('active');
@@ -104,6 +111,10 @@ if (!localStorage.getItem('newsletterDisplayed')) {
 
 
 const modalItem = document.querySelector('.modalItem');
+const cartAmount = document.querySelector('.cartAmount');
+const cartIconModal = document.querySelector(".cartModal");
+
+let cartIconListener;
 
 function openModal(itemId) {
     modalItem.style.display = "block";
@@ -113,11 +124,23 @@ function openModal(itemId) {
         document.querySelector(".itemName").textContent = data.name;
         document.querySelector(".itemPrice").textContent = "Price: $" + data.price;
         document.querySelector('.itemDescription').textContent = data.description;
+
+        if (cartIconListener) {
+            cartIconModal.removeEventListener('click', cartIconListener);
+        }
+
+        cartIconListener = function() {
+            incrementCartAmount();
+        }
+
+        
+        cartIconModal.addEventListener('click', cartIconListener);
     }).catch(function(error) {
     console.error(error);
     closeModal();
   });
 }
+
 
 const cartIcons = document.querySelectorAll('.modalTrigger');
 
@@ -129,14 +152,20 @@ cartIcons.forEach(function(icon){
     })
 })
 
-
 const closeItem = document.querySelector('.closeItem');
 
 function closeModal() {
-  modalItem.style.display = "none";
+    modalItem.style.display = "none";
+    cartIconModal.removeEventListener('click', cartIconListener);
 }
 
 closeItem.addEventListener('click', closeModal);
+
+function incrementCartAmount() {
+    const currentAmount = parseInt(cartAmount.textContent);
+    const newAmount = currentAmount + 1;
+    cartAmount.textContent = newAmount;
+}
 
 
 

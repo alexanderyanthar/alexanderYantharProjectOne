@@ -367,13 +367,23 @@ header .navBar nav ul li:last-child {
 }
 header .navBar .checkout {
   position: relative;
+  width: 1.5rem;
 }
 header .navBar .checkout .cartAmount {
   font-size: 0.75rem;
-  color: #666;
+  color: #333;
   position: absolute;
-  top: 0;
-  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -8px;
+  right: -8px;
+  background-color: #fff;
+  border: 1px solid #666;
+  border-radius: 50%;
+  width: 80%;
+  height: 80%;
+  text-align: center;
 }
 header .headerContainer {
   height: 100vh;
@@ -477,6 +487,28 @@ header .close {
 }
 header .close:hover {
   color: rgba(255, 0, 0, 0.5);
+}
+header .cart {
+  display: flex;
+  width: 30%;
+  background-color: #fff;
+  height: 100vh;
+  overflow: visible;
+  z-index: 2;
+  position: fixed;
+  top: 88px;
+  right: -100%;
+  text-align: center;
+  transition: 0.5s ease-in-out;
+}
+header .cart h2 {
+  margin: 0 auto;
+  padding: 1rem;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+header .cart.active {
+  right: 0;
 }
 
 .catalogueContainer .wrapper {

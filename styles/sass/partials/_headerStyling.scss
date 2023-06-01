@@ -36,13 +36,23 @@ header {
 
         .checkout {
             position: relative;
+            width: 1.5rem;
 
             .cartAmount {
                     font-size: 0.75rem;
-                    color: $lightGrey;
+                    color: $darkGrey;
                     position: absolute;
-                    top: 0;
-                    right: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    top: -8px;
+                    right: -8px;
+                    background-color: $white;
+                    border: 1px solid $lightGrey;
+                    border-radius: 50%;
+                    width: 80%;
+                    height: 80%;
+                    text-align: center;
                 }
         }
     }
@@ -160,5 +170,30 @@ header {
 
     .close:hover {
         color: rgb(255, 0, 0, 0.5);
+    }
+
+    .cart {
+        display: flex;
+        width: 30%;
+        background-color: $white;
+        height: 100vh;
+        overflow: visible;
+        z-index: 2;
+        position: fixed;
+        top: 88px;
+        right: -100%;
+        text-align: center;
+        transition: 0.5s ease-in-out;
+    }
+
+    .cart h2 {
+        margin: 0 auto;
+        padding: 1rem;
+        text-decoration: underline;
+        text-underline-offset: 6px;
+    }
+
+    .cart.active {
+        right: 0;
     }
 }
