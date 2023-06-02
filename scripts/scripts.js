@@ -6,7 +6,7 @@ let lastScrollY = window.scrollY;
 const contact = document.querySelector('.contact');
 const userProfile = document.querySelector('.userProfile');
 const checkout = document.querySelector('.checkout');
-const cart = document.querySelector('.cart');
+const cartMenu = document.querySelector('.cartMenu');
 
 
 /* resources
@@ -20,7 +20,7 @@ https://www.youtube.com/watch?v=At4B7A4GOPg&t=2s&ab_channel=WebDevSimplified
 
 
 checkout.addEventListener('click', function() {
-    cart.classList.toggle('active');
+    cartMenu.classList.toggle('active');
 })
 
 contact.addEventListener('click', function(){
@@ -115,6 +115,9 @@ const cartAmount = document.querySelector('.cartAmount');
 const cartIconModal = document.querySelector(".cartModal");
 
 let cartIconListener;
+let cartItems = [];
+
+
 
 function openModal(itemId) {
     modalItem.style.display = "block";
@@ -157,15 +160,19 @@ const closeItem = document.querySelector('.closeItem');
 function closeModal() {
     modalItem.style.display = "none";
     cartIconModal.removeEventListener('click', cartIconListener);
+
 }
 
 closeItem.addEventListener('click', closeModal);
 
-function incrementCartAmount() {
+function incrementCartAmount(itemId) {
     const currentAmount = parseInt(cartAmount.textContent);
     const newAmount = currentAmount + 1;
     cartAmount.textContent = newAmount;
+
+    cartItems.push(itemId);
 }
+
 
 
 
