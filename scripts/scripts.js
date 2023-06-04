@@ -1,4 +1,4 @@
-import { fetchItemData  } from "./firebase.js";
+
 
 const hamburger = document.querySelector(".hamburgerMenu");
 const navMenu = document.querySelector(".navMenu");
@@ -120,50 +120,47 @@ const cartIconModal = document.querySelector(".cartModal");
 let cartIconListener;
 let cartItems = [];
 
-
-
 function openModal(itemId) {
     modalItem.style.display = "block";
     // Fetch item information and update the modal content
-    fetchItemData(itemId).then(function(data) {
-        document.querySelector(".itemImage").src = data.image;
-        document.querySelector(".itemName").textContent = data.name;
-        document.querySelector(".itemPrice").textContent = "Price: $" + data.price;
-        document.querySelector('.itemDescription').textContent = data.description;
+    fetchItemData(itemId)
+        .then(function(data) {
+            document.querySelector(".itemImage").src = data.image;
+            document.querySelector(".itemName").textContent = data.name;
+            document.querySelector(".itemPrice").textContent = "Price: $" + data.price;
+            document.querySelector('.itemDescription').textContent = data.description;
 
-        if (cartIconListener) {
-            cartIconModal.removeEventListener('click', cartIconListener);
-        }
+            if (cartIconListener) {
+                cartIconModal.removeEventListener('click', cartIconListener);
+            }
 
-        cartIconListener = function() {
-            incrementCartAmount();
-        }
+            cartIconListener = function() {
+                incrementCartAmount(itemId);
+            }
 
-        
-        cartIconModal.addEventListener('click', cartIconListener);
-    }).catch(function(error) {
-    console.error(error);
-    closeModal();
-  });
+            cartIconModal.addEventListener('click', cartIconListener);
+        })
+        .catch(function(error) {
+            console.error(error);
+            closeModal();
+        });
 }
-
 
 const cartIcons = document.querySelectorAll('.modalTrigger');
 
-cartIcons.forEach(function(icon){
+cartIcons.forEach(function(icon) {
     const itemId = icon.getAttribute("data-item-id");
 
-    icon.addEventListener('click', function(){
+    icon.addEventListener('click', function() {
         openModal(itemId);
-    })
-})
+    });
+});
 
 const closeItem = document.querySelector('.closeItem');
 
 function closeModal() {
     modalItem.style.display = "none";
     cartIconModal.removeEventListener('click', cartIconListener);
-
 }
 
 closeItem.addEventListener('click', closeModal);
@@ -174,13 +171,51 @@ function incrementCartAmount(itemId) {
     cartAmount.textContent = newAmount;
 
     cartItems.push(itemId);
+    addToCartMenu(itemId);
 }
 
+import { app } from "./firebase.js";
+import { getDatabase, ref, onValue, get } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js';
 
+const database = getDatabase(app);
+const dbRef = ref(database);
 
+const cartList = document.querySelector('.cartList');
 
+function addToCartMenu(itemId) {
+    fetchItemData(itemId)
+        .then((itemData) => {
+            const cartItem = document.createElement('li');
+            cartItem.classList.add('cartItem');
 
+            cartItem.innerHTML = `
+                <img class="cartItemImage" src="${itemData.image}" alt="${itemData.name}">
+                <div class="cartItemDetails">
+                    <h4 class="cartItemName">${itemData.name}</h4>
+                    <p class="cartItemPrice">Price: $${itemData.price}</p>
+                </div>`;
 
+            cartList.appendChild(cartItem);
+        })
+        .catch((error) => {
+            console.error(error);
+        });
+}
 
+function fetchItemData(itemId) {
+    const itemRef = ref(database, `items/` + itemId);
 
-
+    return get(itemRef)
+        .then((snapshot) => {
+            if (snapshot.exists()) {
+                const itemData = snapshot.val();
+                return itemData;
+            } else {
+                throw new Error('Item not found');
+            }
+        })
+        .catch((error) => {
+            console.error(error);
+            throw error;
+        });
+}
