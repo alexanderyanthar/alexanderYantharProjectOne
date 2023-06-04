@@ -776,6 +776,7 @@ footer .wrapper {
   justify-content: space-between;
   align-items: center;
   height: 30vh;
+  /* Darken the entire viewport background */
 }
 footer .wrapper h3 {
   font-size: 1.25rem;
@@ -899,6 +900,81 @@ footer .wrapper .form form fieldset [type=email] {
   background-color: #333;
   padding-bottom: 0.5rem;
   width: 100%;
+}
+footer .wrapper .form form #email:focus {
+  outline: green solid;
+}
+footer .wrapper .thanksModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+footer .wrapper .modalBackground {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Set the opacity to 0.5 to darken the background */
+  z-index: 1;
+}
+footer .wrapper .modalContent {
+  position: relative;
+  background-color: #fff;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid rgba(102, 102, 102, 0.3098039216);
+  box-shadow: 0 0 10px;
+  width: 100%;
+  max-width: 700px;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+  height: 300px;
+  text-align: center;
+}
+footer .wrapper .modalContent h2 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #333;
+}
+footer .wrapper .modalContent p {
+  color: #333;
+  margin: 1rem 0;
+  font-size: 1.25rem;
+}
+footer .wrapper .modalContent p .moneyOff {
+  color: #eba0aa;
+  font-size: 1.5rem;
+}
+footer .wrapper .modalContent button {
+  border-color: #333;
+  margin: 1rem;
+}
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+footer .wrapper .closeThanksModal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: rgba(102, 102, 102, 0.3098039216);
+  cursor: pointer;
+}
+footer .wrapper .closeThanksModal:hover {
+  color: rgba(255, 0, 0, 0.5);
 }
 
 .contactForm .wrapper fieldset {

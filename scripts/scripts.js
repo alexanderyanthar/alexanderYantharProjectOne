@@ -19,6 +19,7 @@ https://www.youtube.com/watch?v=At4B7A4GOPg&t=2s&ab_channel=WebDevSimplified
 
 
 
+
 checkout.addEventListener('click', function() {
     cartMenu.classList.toggle('active');
 })
@@ -54,60 +55,62 @@ document.querySelectorAll(".navLink").forEach(n => n.addEventListener('click', c
 
 // ** THE CODE BELOW HAS BEEN LARGELY MADE WITH CHATGPT!
 
+const modal = document.querySelector(".modal");
+const modalBackground = document.querySelector('.modalBackground');
+const closeBtn = document.querySelector('.close');
+const subscribeBtn = document.querySelector('#submitButton');
 
-const value = localStorage.getItem('newsletterDisplayed');
-
-if (!localStorage.getItem('newsletterDisplayed')) {
-
-    const halfHeight = Math.floor(document.body.scrollHeight / 2);
-
-    function displayNewsletterModal() {
-        const modalBackground = document.querySelector('.modalBackground');
-        const emailInput = document.getElementById("email");
-        const newsletterModal = document.querySelector(".modal");
-        const close = document.querySelector(".close");
-
-        newsletterModal.style.display = "block";
-        modalBackground.style.display = "block";
-
-        function closeNewsletterModal() {
-            newsletterModal.style.display = 'none';
-            modalBackground.style.display = 'none';
-        }
-
-        close.addEventListener('click', closeNewsletterModal);
-
-        localStorage.setItem('newsletterDisplayed', true);
-
-        const button = document.querySelector('#submitButton');
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetForm = document.getElementById('newsletterForm');
-            const targetPos = targetForm.offsetTop;
-
-            window.scrollTo({
-                top: targetPos,
-                behavior: "smooth"
-            });
-
-            closeNewsletterModal();
-            addBorderWithFade(targetForm);
-
-            function addBorderWithFade(element) {
-                element.style.border = '2px solid green';
-                element.style.transition = 'border-color ease-in-out 0.3s'
-                setTimeout(function() {
-                    element.style.border = 'none';
-                    element.style.transition = '';
-                }, 3000);
-            }
-        });
-
-        window.removeEventListener('scroll', displayNewsletterModal);
-    }
-
-    window.addEventListener('scroll', displayNewsletterModal);
+function displayModal() {
+    modal.style.display = 'block';
+    modalBackground.style.display = 'block';
 }
+
+setTimeout(displayModal, 3000);
+
+function closeNewsletterModal() {
+    modal.style.display = 'none';
+    modalBackground.style.display = 'none';
+}
+
+closeBtn.addEventListener('click', closeNewsletterModal);
+const newsletterDisplay = document.querySelector(".form")
+const emailInput = document.querySelector('#email');
+
+subscribeBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    newsletterDisplay.scrollIntoView({behavior: 'smooth'});
+    modal.style.display = 'none';
+    modalBackground.style.display = 'none';
+
+    setTimeout(function() {
+        emailInput.focus();
+    }, 350)
+
+})
+
+const thanksModal = document.querySelector('.thanksModal');
+const closeThanksModal = document.querySelector('.closeThanksModal');
+
+closeThanksModal.addEventListener('click', function() {
+    thanksModal.style.display = 'none';
+    modalBackground.style.display = 'none';
+})
+
+
+const newsletterForm = document.querySelector('form');
+
+newsletterForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    thanksModal.style.display = 'block';
+    modalBackground.style.display = 'block';
+    setTimeout(function() {
+        thanksModal.style.display = 'none';
+        modalBackground.style.display = 'none';
+    }, 3000)
+    newsletterForm.reset();
+    emailInput.blur();
+}) 
 
 
 const modalItem = document.querySelector('.modalItem');
