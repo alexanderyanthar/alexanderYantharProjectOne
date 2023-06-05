@@ -1,5 +1,3 @@
-
-
 const hamburger = document.querySelector(".hamburgerMenu");
 const navMenu = document.querySelector(".navMenu");
 let lastScrollY = window.scrollY;
@@ -170,8 +168,16 @@ function incrementCartAmount(itemId) {
     const newAmount = currentAmount + 1;
     cartAmount.textContent = newAmount;
 
-    cartItems.push(itemId);
-    addToCartMenu(itemId);
+    const existingCartItem = cartItems.find(item => item.itemId === itemId);
+    if (existingCartItem) {
+        // Increment the quantity of the existing item
+        existingCartItem.quantity += 1;
+    } else {
+        // Add the item to the cartItems array
+        cartItems.push({ itemId: itemId, quantity: 1 });
+    }
+
+    addToCartMenu();
 }
 
 import { app } from "./firebase.js";
@@ -182,24 +188,32 @@ const dbRef = ref(database);
 
 const cartList = document.querySelector('.cartList');
 
-function addToCartMenu(itemId) {
-    fetchItemData(itemId)
-        .then((itemData) => {
-            const cartItem = document.createElement('li');
-            cartItem.classList.add('cartItem');
+function addToCartMenu() {
+    // Clear the cart list before re-rendering
+    cartList.innerHTML = '';
 
-            cartItem.innerHTML = `
-                <img class="cartItemImage" src="${itemData.image}" alt="${itemData.name}">
-                <div class="cartItemDetails">
-                    <h4 class="cartItemName">${itemData.name}</h4>
-                    <p class="cartItemPrice">Price: $${itemData.price}</p>
-                </div>`;
+    cartItems.forEach(cartItem => {
+        fetchItemData(cartItem.itemId)
+            .then((itemData) => {
+                const cartItemElement = document.createElement('li');
+                cartItemElement.classList.add('cartItem');
 
-            cartList.appendChild(cartItem);
-        })
-        .catch((error) => {
-            console.error(error);
-        });
+                cartItemElement.innerHTML = `
+                    <div class="cartItemDetails">
+                        <img class="cartItemImage" src="${itemData.image}" alt="${itemData.name}">
+                        <div class="cartItemContent">
+                            <h4 class="cartItemName">${itemData.name}</h4>
+                            <p class="cartItemPrice">Price: $${itemData.price}</p>
+                        </div>
+                    </div>
+                    <p class="cartItemQuantity">x${cartItem.quantity}</p>`;
+
+                cartList.appendChild(cartItemElement);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    });
 }
 
 function fetchItemData(itemId) {

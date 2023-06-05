@@ -490,16 +490,17 @@ header .close:hover {
 }
 header .cartMenu {
   display: flex;
-  width: 30%;
+  flex-direction: column;
+  width: 40%;
   background-color: #fff;
-  height: 100vh;
-  overflow: visible;
+  height: 90vh;
   z-index: 2;
   position: fixed;
   top: 88px;
   right: -100%;
   text-align: center;
   transition: 0.5s ease-in-out;
+  overflow: scroll;
 }
 header .cartMenu h2 {
   margin: 0 auto;
@@ -509,6 +510,35 @@ header .cartMenu h2 {
 }
 header .cartMenu.active {
   right: 0;
+}
+header .cartMenu .cartList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+header .cartMenu .cartList .cartItemQuantity {
+  margin: 1rem;
+}
+header .cartMenu .cartList .cartItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .cartMenu .cartList .cartItem .cartItemDetails {
+  display: flex;
+  align-items: center;
+}
+header .cartMenu .cartList .cartItem .cartItemImage {
+  width: 25%;
+}
+header .cartMenu .cartList .cartItem .cartItemContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header .cartMenu .cartList .cartItem .cartItemContent h4 {
+  margin: 0;
 }
 
 .catalogueContainer .wrapper {
